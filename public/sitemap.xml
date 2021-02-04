@@ -3,41 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://moiva.io/introducing-lanyon/</loc>
+    <loc>https://moiva.io/blog/moiva-v3-evaluate-any-github-project-find-alternatives-and-compare/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moiva.io/</loc>
+    <loc>https://moiva.io/blog/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moiva.io/post/</loc>
+    <loc>https://moiva.io/blog/post/</loc>
     <lastmod>2021-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moiva.io/about/</loc>
-    <lastmod>2015-12-31T00:00:00+00:00</lastmod>
+    <loc>https://moiva.io/blog/categories/</loc>
   </url>
   
   <url>
-    <loc>https://moiva.io/example-content/</loc>
-    <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moiva.io/whats-jekyll/</loc>
-    <lastmod>2013-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moiva.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://moiva.io/tags/</loc>
+    <loc>https://moiva.io/blog/tags/</loc>
   </url>
   
 </urlset>

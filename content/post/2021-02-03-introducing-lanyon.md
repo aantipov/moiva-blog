@@ -1,6 +1,7 @@
 {
-    "title": "Introducing Lanyon",
-    "date": "2021-02-03"
+    "title": "Moiva v3: evaluate Any Github project, find alternatives and compare",
+    "date": "2021-02-03",
+    "summary": "Another major release and exciting major changes!"
 }
 
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.

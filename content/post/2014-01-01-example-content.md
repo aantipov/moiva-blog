@@ -1,6 +1,8 @@
 {
     "title": "Example content",
-    "date": "2014-01-01"
+    "date": "2014-01-01",
+    "summary": "simple and easy",
+    "draft": true
 }
 
 
