@@ -1,4 +1,16 @@
-baseURL = "http://example.org/"
+baseURL = "https://moiva.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "lanyon"
+
+[permalinks]
+  post = ":title"
+  fixed = ":title"
+
+[params]
+  Title = "Moiva.io Blog"
+  Tagline = "Moiva tagline"
+  Author = "Alexey Antipov"
+  DateForm = "Jan 2 2006"
+  mainSections = ["post"]
+  Github = ""
