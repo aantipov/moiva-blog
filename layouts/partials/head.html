@@ -22,6 +22,23 @@
   {{- range .Site.Params.customCSS }}
   <link rel="stylesheet" href="{{ . | relURL }}">
   {{- end }}
+  <style type="text/css" media="screen">
+    html,
+      body {
+        height: 100%;
+        min-height: 640px;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1 0 auto;
+      }
+      .footer {
+        flex-shrink: 0;
+      }
+  </style>
 
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/favicon/apple-touch-icon.png?v=lkvYMB9erB" />
