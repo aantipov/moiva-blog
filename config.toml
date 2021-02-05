@@ -5,7 +5,6 @@ theme = "lanyon"
 
 [permalinks]
   post = ":title"
-  fixed = ":title"
 
 [params]
   Title = "Moiva.io Blog"
