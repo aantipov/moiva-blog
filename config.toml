@@ -1,14 +1,14 @@
 baseURL = "https://moiva.io/blog/"
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "lanyon"
+disableXML = true
+disableKinds = ["RSS", "section", "taxonomy", "term", "404"]
 
 [permalinks]
   post = ":title"
 
 [params]
   Title = "Moiva.io Blog"
-  Tagline = "Moiva tagline"
   Author = "Alexey Antipov"
   DateForm = "Jan 2 2006"
   mainSections = ["post"]

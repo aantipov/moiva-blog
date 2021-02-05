@@ -1,14 +1,13 @@
 {{ partial "default_head.html" . }}
 
+<h2><a href="/blog" title="Home">&larr; all posts</a></h2>
+
 <div class="post">
   <h1 class="post-title">{{ .Title }}</h1>
   <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
   {{ .Content }}
-  {{- if .Site.DisqusShortname -}}
-  <hr>
-  <h2>Comments</h2>
-  {{ template "_internal/disqus.html" . }}
-  {{ end -}}
 </div>
+
+<h2 style="margin-top:-40px"><a href="/blog" title="Home">&larr; all posts</a></h2>
 
 {{ partial "default_foot.html" . }}

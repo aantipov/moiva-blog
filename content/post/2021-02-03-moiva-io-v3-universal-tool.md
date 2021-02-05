@@ -1,7 +1,7 @@
 {
-    "title": "Moiva v3: evaluate Any Github project, find alternatives and compare",
+    "title": "Moiva.io v3: a universal tool to evaluate, find alternatives and compare software projects",
     "date": "2021-02-03",
-    "summary": "Another major release and exciting major changes!"
+    "summary": "I rewrote Moiva and made it a universal and pluggable tool to evaluate, find alternatives and compare any software projects - JavaScript, Python, Go, etc."
 }
 
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
