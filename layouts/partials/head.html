@@ -4,9 +4,12 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <!--  Remove it once the blog is ready  -->
+  <meta name="robots" content="noindex">
+
   <title>
     {{ if .IsHome }}
-      {{ .Site.Params.Title }} &middot; {{ .Site.Params.Tagline }}
+      A Blog Of Moiva.io
     {{ else }}
       {{ .Title }} &middot; {{ .Site.Params.Title }}
     {{ end }}
@@ -50,11 +53,6 @@
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-config" content="/blog/favicon/browserconfig.xml?v=lkvYMB9erB" />
   <meta name="theme-color" content="#ffffff" />
-
-
-
-
-
 
 
   <!-- RSS -->
