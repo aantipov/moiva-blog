@@ -4,7 +4,12 @@
 
 <div class="post">
   <h1 class="post-title">{{ .Title }}</h1>
-  <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
+  <div class="post-date">
+    <span>{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
+    <span>&#183; written by</span>
+    <a href="https://twitter.com/_aantipov" target="_blank">Alexey Antipov</a>
+  </div>
+
   {{ .Content }}
 </div>
 
