@@ -9,9 +9,9 @@
 
   <title>
     {{ if .IsHome }}
-      A Blog Of Moiva.io
+    A Blog Of Moiva.io
     {{ else }}
-      {{ .Title }} &middot; {{ .Site.Params.Title }}
+    {{ .Title }} &middot; {{ .Site.Params.Title }}
     {{ end }}
   </title>
 
@@ -27,23 +27,27 @@
   {{- end }}
   <style type="text/css" media="screen">
     html,
-      body {
-        height: 100%;
-        min-height: 640px;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-      .content {
-        flex: 1 0 auto;
-      }
-      .footer {
-        flex-shrink: 0;
-      }
-      .masthead {
-        margin-bottom: 2rem;
-      }
+    body {
+      height: 100%;
+      min-height: 640px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex: 1 0 auto;
+    }
+
+    .footer {
+      flex-shrink: 0;
+    }
+
+    .masthead {
+      margin-bottom: 2rem;
+    }
   </style>
 
   <!-- Icons -->
@@ -56,8 +60,4 @@
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-config" content="/blog/favicon/browserconfig.xml?v=lkvYMB9erB" />
   <meta name="theme-color" content="#ffffff" />
-
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
