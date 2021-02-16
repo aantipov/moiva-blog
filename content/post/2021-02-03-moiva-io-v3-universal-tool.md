@@ -1,8 +1,9 @@
 {
     "title": "Moiva.io v3: a universal tool to Evaluate, Discover and Compare software",
-    "date": "2021-02-03",
+    "date": "2021-02-16",
     "summary": "I rewrote Moiva.io from scratch and made it a universal and flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favourite language here] developer."
 }
+
 Hi, Alexey is here. I have some exciting news for you.
 
 I rewrote [Moiva.io](https://moiva.io/) from scratch and made it a universal and flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favourite language here] developer.
@@ -10,56 +11,43 @@ I rewrote [Moiva.io](https://moiva.io/) from scratch and made it a universal and
 This article marks a third major release of Moiva.
 
 ## What's new (in short)
-- ability to search for and get data for any GitHub repository (don't worry, you can still search and compare Npm packages the same way).
-- possibility to add relatevily easy Search, Suggestion and Comparison for other languages packages like [Maven](https://mvnrepository.com/) (Java), [PIP](https://pypi.org/) (Python) or [Packagist](https://packagist.org/) (PHP).
-- Moiva got [open-sourced](https://github.com/aantipov/moiva)
+- ability to search for and get data for any GitHub repository (in addition to search and comparison of Npm packages).
+- possibility to bring (relatevily easy) Search, Suggestion and Comparison capabilities to other languages packages like [Maven](https://mvnrepository.com/) (Java), [PIP](https://pypi.org/) (Python) or [Packagist](https://packagist.org/) (PHP).
+- last but not least, Moiva got [open-sourced](https://github.com/aantipov/moiva).
 
-## The History of releases
-Before I explain how and what was done to achieve the current milestone, I think it can be interesting to briefly look at the not a long history of Moiva.io.
+## Why did I do it
+At first, I wanted to focus on JavaScript ecosystem, making npm packages first-class citizens at Moiva.io.
 
-### October 2020: the Idea was born 
-I have being actively looking for ideas where to apply my knowledge and skills since March. The idea finally came to me one night when I was trying to fall asleep.
+The goal was to provide developers with a good tool to evaluate and compare npm packages in different dimensions - Popularity, Maintenance, Security, etc.
 
-I had not seen a good javascript framework comparison tool even though the topic was always hot and many articles were written trying to solve it, gathering and analyzing data from many different sources. Also many different surveys were conducted to answer similar quistion - which framework/library to pick.
+But very soon I realized that there are many JavaScript or JavaScript related projects which don't have any published npm packages.
 
-So I thought it was worth building a tool that will accumulate, analyze and show always up-to-date data and help developers pick the right tool. 
+Think of, for example, frameworks like `Meteor`. 
 
-### 1st of December 2020: Release on ProductHunt
-I was actively working on my idea before and after my day job. After almost 1.5 month of work I decided it's time to show the project to the public and gather some feedback.
+Moiva.io could potentially be usefull for evaluation of those projects as well thanks to GitHub charts (Contributors, Issues, Commits Frequency, etc.), but search functionality was limited to npm packages only and everything was built around the concept of npm packages.
 
-I published it on [ProductHunt](https://www.producthunt.com/posts/jsdiff).
+On the other hand, if Moiva gets open up to evaluation and comparison of any GitHub project, it will essentially make a universal tool and make it usefull to many more developers.
 
+So I got convinced that Moiva.io should become more Universal and Agile, I just need to come up with a good idea how to do it and how it should work.
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+## AHA moment
+At the beginning the idea looked vague and blurred. I didn't have a good idea how to put together existing functionality for npm packages and the new one for GitHub repositories.
 
-### Built on Poole
+I could implement separate pages for Npm and GitHub, but that was not ideal. Both have a lot in common when comparing JavaScript projects.
 
-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Lanyon here) includes the following:
+Then `AHA` moment came - everything became clear, I realized how to put together different things and since then I didn't have a chance to take a rest before implementation was finished.
 
-* Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/index.xml), posts, and [example page](/about))
-* Mobile friendly design and development
-* Easily scalable text and component sizing with `rem` units in the CSS
-* Support for a wide gamut of HTML elements
-* Related posts (time-based, because Jekyll) below each post
-* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
+In the future articles I want to cover some of the implementation details and decisions I made.
 
-### Lanyon features
+In the mean time, if you are interested, you can also check the [repository's readme](https://github.com/aantipov/moiva/) with the explanation of the Library concept I came up with while implementing the GitHub support.
 
-In addition to the features of Poole, Lanyon adds the following:
+## What's next
+I clearly see a huge potential for [Moiva.io](https://moiva.io/) to become a really useful tool for many developers.
 
-* Toggleable sliding sidebar (built with only CSS) via **☰** link in top corner
-* Sidebar includes support for textual modules and a dynamically generated navigation with active link support
-* Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes
-* [Eight optional color schemes](https://github.com/poole/lanyon#themes), available via `<body>` classes
+It can grow and become better in different directions.
+I mention a few most evident to me and, probably, most important:
+- enable search/suggestion/comparison for more languages package systems (Maven, PIP, etc.).
+- add more usefull charts and data, both generic and language/package-system specific.
+- improve significantly alternatives suggestion system. Currently it's based on [Moiva Catalog](https://github.com/aantipov/moiva-catalog) and needs a lot of data to be put there. I see a way how community could help and contribute there.
 
-[Head to the readme](https://github.com/poole/lanyon#readme) to learn more.
-
-### Browser support
-
-Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
-
-### Download
-
-Lanyon is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/lanyon">GitHub repository</a> for downloads, bug reports, and features requests.
-
-Thanks!
+Stay tuned and Subsribe to the newsletter. I want to publish more interesting content about Moiva development.
