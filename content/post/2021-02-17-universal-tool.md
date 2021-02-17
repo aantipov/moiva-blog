@@ -2,12 +2,12 @@
     "title": "Moiva.io v3: a universal tool to Evaluate, Discover and Compare software",
     "date": "2021-02-17",
     "url": "universal-tool-to-evaluate-discover-compare-software",
-    "summary": "I rewrote Moiva.io from scratch and made it a Universal and Flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favourite language here] developer."
+    "summary": "I rewrote Moiva.io from scratch and made it a Universal and Flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favorite language here] developer."
 }
 
-Hi, Alexey is here. I have some exciting news for you.
+Hi, Alexey is here. I have some exciting news for you!
 
-I rewrote [Moiva.io](https://moiva.io/) from scratch and made it a Universal and Flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favourite language here] developer.
+I rewrote [Moiva.io](https://moiva.io/) from scratch and made it a Universal and Flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favorite language here] developer.
 
 This article marks a third major release of Moiva.
 
@@ -45,7 +45,7 @@ Here is the essence of the solution.
 ### One Search for All
 The same single search field can be used to search for both npm packages and GitHub repositories. It can be easily achieved via search modifiers (prefixes).
 
-Default search is for GitHub. 
+The default search is for GitHub. 
 
 The search prefixed with `n:` is for npm packages.
 
@@ -54,11 +54,11 @@ The search prefixed with `n:` is for npm packages.
 What I like about that solution is that it can be easily extended in the future to search for other things as well.
 
 ### Show only relevant charts
-If a user selects only GitHub repositories without related npm packages, then we can just hide npm related charts. No reason to show them.
+If a user selects only GitHub repositories without related npm packages, then we can just hide npm-related charts. No reason to show them.
 
 It's similar to how ThoughtWorks TechRadar and Developer Usage charts work - they are shown only when there are data for the selected npm packages.
 
-At the same time, if the user selects a mix of npm and Github projects, we will show npm related charts for the selected npm packages.
+At the same time, if the user selects a mix of npm and Github projects, we will show npm-related charts for the selected npm packages.
 
 ### How about URLs
 Every comparison a user makes in Moiva should be easily reproducible via URL.
@@ -67,13 +67,13 @@ It means that Moiva should be able to derive from the URL what information to lo
 
 When npm packages were the only citizens in the Moiva world, the task was solved easily - the selected npm packages' names were listed in a query parameter: `https://moiva.io/?compare=react+svelte+vue`.
 
-Having 2 types of citizens, npm and Github, where one depends on the other, complicates things a bit. Moreover, we want to build a future proof solution that can incorporate other types of citizens like PIP and Maven.
+Having 2 types of citizens, npm and Github, where one depends on the other, complicates things a bit. Moreover, we want to build a future-proof solution that can incorporate other types of citizens like PIP and Maven.
 
 GitHub has a broader scope than npm and my first idea was to replace URL npm identifiers with GitHub identifiers. But there are 2 problems with it:
 - it's not clear how to derive the npm package from the GitHub repository. At least I couldn't find the solution for that.
 - one GitHub repo can be a source of multiple npm packages. There is no 1:1 connection.
 
-It lead me to a conclusion that GitHub and npm should be referenced separately in the URL. 
+It lead me to the conclusion that GitHub and npm should be referenced separately in the URL. 
 
 So I just decided to have separate query parameters: `https://moiva.io/?npm=svelte+vue&github=meteor/meteor`.
 
@@ -82,23 +82,23 @@ Imagine two situations:
 1. a user selects Vue as an npm package.
 2. a user selects Vue as a GitHub repo.
 
-In the first situation Moiva shows npm related data and charts like npm Downloads. In the second situation it doesn't.
+In the first, situation Moiva shows npm-related data and charts like npm Downloads. In the second situation, it doesn't.
 
 But is it fair? Most probably a user would expect to see the same set of information in both cases, right?
 
 Could we still somehow derive information about the npm package from the GitHub repository? If yes, then we could show npm data for the selected GitHub repository.
 
-Turns out we can make use of [Moiva Catalog](https://github.com/aantipov/moiva-catalog) which was built to implement Suggestions mechanism.
+Turns out we can make use of [Moiva Catalog](https://github.com/aantipov/moiva-catalog) which was built to implement the Suggestions mechanism.
 For every listed GitHub repository we can add a name of the npm package if there is one. It means we can solve the problem of the reconciliation for items listed in the catalog. And I think it's a good enough solution with which we can cover the most popular libraries.
 
 We just need to take care of some details and edge cases.
-1. If a repository does have an npm package, but that package is just one of the repo's "by-products", then probably it doesn't make sence to show that npm package data when selecting the repository. To solve that problem, additional flag `isNpmCoreArtifact` in the catalog can be used to indicate the "role" of the npm package.
+1. If a repository does have an npm package, but that package is just one of the repo's "by-products", then probably it doesn't make sense to show that npm package data when selecting the repository. To solve that problem, an additional flag `isNpmCoreArtifact` in the catalog can be used to indicate the "role" of the npm package.
 2. If we successfully derive npm data from the GitHub repository, it means we essentially display the same information for both npm and GitHub and have different URL identifiers for the same page. It's not good, especially in terms of SEO. So I decided to use npm package's name as a URL identifier in such cases. Try load `https://moiva.io/?github=vuejs/vue` url and see what happens ;=)
 
 ### Data model
 I mentioned just a few of the problems I had to solve. There were, of course, many others, like duplication handling, aliases, SEO, etc.
 
-Most of the problems got a straightforward solution once I implemented a proper Data Model - I came up with a new abstraction called "Library" and provided it with certain properties and behaviour. 
+Most of the problems got a straightforward solution once I implemented a proper Data Model - I came up with a new abstraction called "Library" and provided it with certain properties and behavior. 
 
 If you are interested, you can check the [repository's readme](https://github.com/aantipov/moiva/) for more details about the Library concept.
 
