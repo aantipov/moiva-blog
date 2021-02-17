@@ -49,7 +49,7 @@ The default search is for GitHub.
 
 The search prefixed with `n:` is for npm packages.
 
-![](/blog/images/universal-tool/search.png)
+![An image of the Search field at Moiva.io](/blog/images/universal-tool/search.png)
 
 What I like about that solution is that it can be easily extended in the future to search for other things as well.
 
