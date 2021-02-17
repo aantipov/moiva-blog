@@ -7,18 +7,18 @@
 
 Hi, Alexey is here. I have some exciting news for you!
 
-I rewrote [Moiva.io](https://moiva.io/) from scratch and made it a Universal and Flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favorite language here] developer.
+I rewrote [Moiva.io](https://moiva.io/) from scratch and made it a Universal and Flexible tool to suit a taste of every software developer be they a JavaScript, Python or [put your favorite language here] developer.
 
 This article marks a third major release of Moiva.
 
 ![A screenshot of Moiva.io showing comparison of Vue and Svelte npm packages](/blog/images/universal-tool/full.png)
 
 ## What's new (in short)
-- ability to search for and get data for any GitHub repository (in addition to search and comparison of Npm packages).
-- possibility to bring (relatively easy) Search, Suggestion, and Comparison capabilities to other languages package management systems like [Maven](https://mvnrepository.com/) (Java), [PIP](https://pypi.org/) (Python), or [Packagist](https://packagist.org/) (PHP).
+- ability to search for and get data for any GitHub repository in addition to search and comparison of NPM packages.
+- possibility to bring (relatively easy) Search, Suggestion, and Comparison capabilities to other programming languages' package management systems like [Maven](https://mvnrepository.com/) (Java), [PIP](https://pypi.org/) (Python), or [Packagist](https://packagist.org/) (PHP).
 - last but not least, Moiva got [open-sourced](https://github.com/aantipov/moiva).
 
-## Why did I do it
+## Why I did it
 At first, I wanted to focus on JavaScript ecosystem, making npm packages first-class citizens in Moiva.io.
 
 The goal was to provide developers with a good tool to evaluate and compare npm packages in different dimensions - Popularity, Maintenance, Security, etc.
@@ -77,12 +77,12 @@ It lead me to the conclusion that GitHub and npm should be referenced separately
 
 So I just decided to have separate query parameters: `https://moiva.io/?npm=svelte+vue&github=meteor/meteor`.
 
-### GitHub and Npm reconciliation
+### GitHub and NPM reconciliation
 Imagine two situations:
 1. a user selects Vue as an npm package.
 2. a user selects Vue as a GitHub repo.
 
-In the first, situation Moiva shows npm-related data and charts like npm Downloads. In the second situation, it doesn't.
+In the first situation Moiva shows npm-related data and charts like npm Downloads. In the second situation, it doesn't.
 
 But is it fair? Most probably a user would expect to see the same set of information in both cases, right?
 
@@ -106,9 +106,13 @@ If you are interested, you can check the [repository's readme](https://github.co
 I clearly see a huge potential for [Moiva.io](https://moiva.io/) to become a really useful tool to many developers.
 
 It can grow and become better in different directions.
-I will mention a few most evident to me and, probably, most important:
+I will mention a few of them which look most important to me:
 - enable search/suggestion/comparison for more languages' package systems (Maven, PIP, etc.).
 - add more useful charts and data, both generic and language/package-system specific.
 - improve significantly the alternatives suggestion system. Currently, it's based on [Moiva Catalog](https://github.com/aantipov/moiva-catalog) and needs a lot of data to be put there. I see a way how the community could help and contribute there.
+
+---
+
+I hope I didn't waste your time and you found the reading and the project itself interesting.
 
 Stay tuned and Subscribe to the newsletter. I want to publish more interesting content about Moiva development.
