@@ -49,14 +49,14 @@ The default search is for GitHub.
 
 The search prefixed with `n:` is for npm packages.
 
-![An image of the Search field at Moiva.io](/blog/images/universal-tool/search.png)
+![A gif showing how Search field at Moiva.io works: search for NPM packages and GitHub repositories](/blog/images/universal-tool/search.gif)
 
 What I like about that solution is that it can be easily extended in the future to search for other things as well.
 
 ### Show only relevant charts
 If a user selects only GitHub repositories without related npm packages, then we can just hide npm-related charts. No reason to show them.
 
-It's similar to how ThoughtWorks TechRadar and Developer Usage charts work - they are shown only when there are data for the selected npm packages.
+It's similar to how ThoughtWorks TechRadar and Developer Usage charts work - they are shown only when there is data for the selected npm packages.
 
 At the same time, if the user selects a mix of npm and Github projects, we will show npm-related charts for the selected npm packages.
 
