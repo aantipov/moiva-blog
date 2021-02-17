@@ -38,9 +38,39 @@ I could implement separate pages for Npm and GitHub, but that was not ideal. Bot
 
 Then the `AHA` moment came - everything became clear, I realized how to put together different things and since then I didn't have a chance to take a rest before implementation was finished.
 
+Here is the essence of the idea.
+
+### One Search for All
+The same single search field can be used to search for both Npm packages and GitHub repositories. It can be easily achieved via search modifiers (prefixes).
+
+Default search is for GitHub. 
+
+The search prefixed with `n:` is for Npm packages.
+
+![](/blog/images/universal-tool/search.png)
+
+What I like about that solution is that it can be easily extended in the future to search for other things as well.
+
+### Show only relevant charts
+If a user selected only GitHub repositories without connected Npm packages, then we can just hide Npm related charts. No reason to show them.
+
+It's similar to how Google Trends and Developer Usage charts work - they are shown only when there are data for the selected Npm packages.
+
+At the same time, if the user selected a mix of Npm and Github projects, we will show Npm related charts for the selected Npm packages.
+
+### Handling of Monorepo cases
+If a user selected several npm packages which belong to the same repository, then we could have duplication in GitHub charts.
+
+Moiva should be clever enough to handle such cases gracefully - do deduplication and show GitHub charts only for the first selected Npm package.
+
 In future articles I want to cover some of the implementation details and decisions I made.
 
 In the meantime, if you are interested, you can also check the [repository's readme](https://github.com/aantipov/moiva/) with the explanation of the Library concept I came up with while implementing the GitHub support.
+
+### NPM data for GitHub repositories
+Many Npm packages serve as main artifacts for their GitHub repository. 
+Wouldn't it be great if Moiva could magically know and show Npm charts when a user selects one of such repositories?
+Moiva already has [Moiva Catalog](https://github.com/aantipov/moiva-catalog)
 
 ## What's next
 I clearly see a huge potential for [Moiva.io](https://moiva.io/) to become a really useful tool to many developers.
