@@ -1,6 +1,6 @@
 {
     "title": "Moiva.io v3: a universal tool to Evaluate, Discover and Compare software",
-    "date": "2021-02-16",
+    "date": "2021-02-17",
     "url": "universal-tool-to-evaluate-discover-compare-software",
     "summary": "I rewrote Moiva.io from scratch and made it a Universal and Flexible tool to suit every software developer's taste be it a JavaScript, Python or [put your favourite language here] developer."
 }
