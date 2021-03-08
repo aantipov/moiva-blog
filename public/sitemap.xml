@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://moiva.io/blog/universal-tool-to-evaluate-discover-compare-software/</loc>
-    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
+    <loc>https://moiva.io/blog/2021-03-update-migration-to-cloudflare-workers/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://moiva.io/blog/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moiva.io/blog/universal-tool-to-evaluate-discover-compare-software/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url>
   
