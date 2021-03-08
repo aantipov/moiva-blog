@@ -17,11 +17,11 @@ Having said that, the more mature Moiva becomes, the more requirements it has an
 
 One of the limitations was Moiva's requirements to serverless functions. It needed more visibility, more efficiency, more sophisticated debugging capabilities, more advanced features.
 
-One time I came across [Cloudflare Workers](https://workers.cloudflare.com/) and it caught my attention, it looked pretty attractive and mature solution for serverless functions.
+One time I came across [Cloudflare Workers](https://workers.cloudflare.com/) and it caught my attention, it looked pretty attractive and seemed a mature and sophisticated solution for serverless functions.
 
 After a bit of analysis, I quickly realized that it's the thing I needed.
 
-So I set up to migrate all the api endpoints to Cloudflare Workers. I also implemented more sophisticated cache management tailored to each api endpoint. It took several evenings and morning to finish it.
+So I set out to migrate all the api endpoints to Cloudflare Workers. I also implemented more sophisticated cache management tailored to each api endpoint. It took several evenings and mornings to finish it.
 
 I believe such changes should improve Moiva's efficiency and it will become more noticeable once more users start using it and the Cache starts working to the full. 
 
