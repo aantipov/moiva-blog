@@ -13,3 +13,10 @@ disableKinds = ["RSS", "section", "taxonomy", "term", "404"]
   DateForm = "Jan 2 2006"
   mainSections = ["post"]
   Github = ""
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[markup.goldmark.renderer]
+  unsafe= true
