@@ -23,7 +23,7 @@ GitHub provides `stargazers` REST api which retrieves a list of users who starre
 
 I looked around and found that GitHub GraphQL API provides the required data without such limits. It solved half of a problem - finding a data source. Then I had to come up with a clever plan on how to use that API in a way that I don't reach GitHub's rate limits and the data are served fast to users. Thanks to [Cloudflare KV Data Store](https://developers.cloudflare.com/workers/learning/how-kv-works) I avoided the hassle of setting up a database and learning its APIs. Moiva fetches stars data in batches and uses KV as a storage.
 
-## "Catalog" page was added
+## New "Catalog" page
 If you already used Moiva then you know that when evaluating certain libraries you get a list of suggestions for comparison. Besides, Moiva shows a category of the selected libraries.
 
 ![a screenshot of Moiva's search input field with a list of suggested libraries beneath it](/blog/images/2021-04-update/suggestions-category.png)
