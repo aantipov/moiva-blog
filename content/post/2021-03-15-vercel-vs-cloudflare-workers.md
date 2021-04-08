@@ -62,6 +62,9 @@ One of its constituents is Travel Time. The less time the request spends traveli
 **Vercel**'s Network is significantly less dense and spans [less than 20 locations](https://vercel.com/docs/edge-network/regions). It means that on average requests will spend more time traveling.
 Moreover, requests will end on the nearest server only in the happy case of a pre-existing cache. Other times, as we saw above, the request will be forwarded further to the data center which contains the Function. It diminishes all advantages of having a global network of data centers.
 
+![An image of Vercel Edge Network map](/blog/images/vercel-vs-cloudflare/vercel-network.png)
+<div class="code-descr">An image of Vercel Edge Network map (<a href="https://www.mapcustomizer.com/map/Vercel_regions">link</a>)</div>
+
 ## Function Execution time
 Request/Function Execution Time is another major constituent of Speed.
 It largely depends on if there is cached data already or not.
@@ -238,3 +241,7 @@ Enterprise plan enables multi-region Serverless Functions and "Enterprise" suppo
 All plans are subject to Vercel's [Fair Use Policy](https://vercel.com/docs/platform/fair-use-policy).
 
 Check Vercel's [pricing page](https://vercel.com/pricing) for more details.
+
+---
+
+**Update 2021-03-29**: added an image of Vercel Edge Network map. Kudos to [@magnemg](https://twitter.com/magnemg) for creating it.
