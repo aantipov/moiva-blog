@@ -26,7 +26,7 @@ I looked around and found that GitHub GraphQL API provides the required data wit
 ## "Catalog" page was added
 If you already used Moiva then you know that when evaluating certain libraries you get a list of suggestions for comparison. Besides, Moiva shows a category of the selected libraries.
 
-![a screenshot how suggestions work and look](/blog/images/2021-04-update/suggestions-category.png)
+![a screenshot of Moiva's search input field with a list of suggested libraries beneath it](/blog/images/2021-04-update/suggestions-category.png)
 
 That information comes from Moiva's [Catalog](https://github.com/aantipov/moiva-catalog). 
 
@@ -39,11 +39,11 @@ So I created a [Catalog](https://moiva.io/catalog) page that lists all the libra
 ## New GitHub/NPM switch control
 Back in February, when I announced the possibility of searching for, evaluating, and comparing any GitHub projects, I made GitHub a default Moiva search.
 
-![a screenshot of the new Moiva's Catalog page](/blog/images/2021-04-update/npm-search-hint.png)
+![a screenshot of the Moiva's search input field with a placeholder saying "search for GitHub repositories"](/blog/images/2021-04-update/npm-search-hint.png)
 
-Search for npm packages was preserved and users could activate it with a simple `:n` prefix. I added a hint above the search field to let users know about that possibility.
+Search for npm packages was preserved and users could activate it with a simple `n:` prefix. I added a hint above the search field to let users know about that possibility.
 
-![a screenshot of the new Moiva's Catalog page](/blog/images/2021-04-update/npm-search-hint-results.png)
+![a screenshot of the Moiva's search input field with "n:ramda" text in it and a dropdown list of search results (npm packages)](/blog/images/2021-04-update/npm-search-hint-results.png)
 
 Then I checked statistics and found that only 10% of searches are npm-searches. It looked strange to me, because I believe most of Moiva users at this stage come from JavaScript ecosystem and they should be interested more in searching for NPM packages rather than GitHub repositories. Search for NPM packages has one advantage - users can see NPM-related statistics like NPM Downloads and NPM releases.
 
@@ -51,7 +51,7 @@ It seemed that users didn't pay attention to the tiny hint and they were not awa
 
 I decided to made the search type switch more prominent and "user friendly" - using a dropdown selector.
 
-![a screenshot of the new Moiva's Catalog page](/blog/images/2021-04-update/search-type-switch.png)
+![a screenshot of the new Moiva's select control to switch between GitHub and NPM search types](/blog/images/2021-04-update/search-type-switch.png)
 
 The statistics say that the implemented change works - 40-50% of search requests are NPM searches.
 
@@ -62,11 +62,11 @@ Charts play a crucial role in Moiva and it was important to make them accessible
 
 For example, for the following chart 
 
-![a screenshot of the new Moiva's Catalog page](/blog/images/2021-04-update/accessibility-chart-example.png)
+![a screenshot of the new Moiva's "New GitHub stars monthly" chart showing stars distribution for Snowpack repository](/blog/images/2021-04-update/accessibility-chart-example.png)
 
 Moiva provides the following description
 
-![a screenshot of the new Moiva's Catalog page](/blog/images/2021-04-update/accessibility-aria-data.png)
+![a screenshot from Chrome Devtools showing a DOM node for the "New GitHub stars monthly" chart with a "role" and "aria-label" attributes](/blog/images/2021-04-update/accessibility-aria-data.png)
 
 
 ## My article featured on the main page at Hacker News
@@ -77,7 +77,7 @@ I was pleased to see a good reception of it at Hacker News - it got a bunch of c
 ## Traffic
 In terms of traffic, March was the most successful month so far with 4252 visitors.
 
-![a screenshot of the new Moiva's Catalog page](/blog/images/2021-04-update/traffic.png)
+![a screenshot of the Moiva traffic chart for the past 6 months](/blog/images/2021-04-update/traffic.png)
 
 ## Last but not least
 Worth mentioning some of many other updates and changes:
