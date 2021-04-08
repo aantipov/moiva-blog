@@ -1,8 +1,8 @@
 {
     "title": "April 2021 update: GitHub Stars chart and Catalog page",
-    "date": "2021-04-06",
+    "date": "2021-04-08",
     "url": "2021-04-update-github-stars-chart",
-    "summary": "GitHub Stars chart, Catalog of Libraries and Tools, and more"
+    "summary": "GitHub Stars chart, Catalog page, Accessibility, React bundle size fix and more..."
 }
 
 This is a March update on Moiva.io development progress.
