@@ -69,10 +69,10 @@ Moiva provides the following description
 ![a screenshot from Chrome Devtools showing a DOM node for the "New GitHub stars monthly" chart with a "role" and "aria-label" attributes](/blog/images/2021-04-update/accessibility-aria-data.png)
 
 
-## My article featured on the main page at Hacker News
+## Moiva blog featured on the Hacker News main page
 Having migrated Moiva's apis to Cloudflare Workers, I decided to share my knowledge and wrote an article [Vercel Serverless Functions vs Cloudflare Workers](https://moiva.io/blog/vercel-serverless-functions-vs-cloudflare-workers).
 
-I was pleased to see a good reception of it at Hacker News - it got a bunch of comments and was even featured on the main page.
+I was pleased to see a good reception of it at Hacker News - the article got a bunch of comments and was even featured on Hacker News' main page.
 
 ## Traffic
 In terms of traffic, March was the most successful month so far with 4252 visitors.
