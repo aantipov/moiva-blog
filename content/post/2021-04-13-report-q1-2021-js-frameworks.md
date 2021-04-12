@@ -6,6 +6,27 @@
 }
 
 ![](/blog/images/2021-q1-report/logo.png)
+
+## Intro
+The first quarter of 2021 is already behind us and I thought why not to delight the public with the results of how JavaScript libraries performed in Q1 2021.
+
+I used [Moiva](http://moiva.io/) to collect all the interesting data and presented it in a table as well as via charts.
+
+This is the first report I have prepared and it covers JavaScript Frameworks. I'm gonna prepare a few more similar reports dedicated to other categories - State Management libraries, CSS Frameworks, End-to-End Testing Libraries, Node.js frameworks, Build Tools and Bundlers, Testing Frameworks and Static Site Generators.
+
+## Data Sources
+- [NPM](https://www.npmjs.com/) provided information about libraries downloads and releases, as well as Types and Dependencies.
+- Google provided Search Interest data.
+- GitHub was used for getting Stars, Commits, Contributors, License, and age.
+- [Bundlephobia](https://bundlephobia.com/) provided Bundle Size data.
+- [State of JavaScript Survey](https://stateofjs.com/) - Libraries Usage data.
+- [ThoughtWorks](https://www.thoughtworks.com/)'s Technology Radar data
+
+## Metrics
+
+## Awards
+
+## Report
 <style type='text/css'>
 .wrapper-2021q1 {
     border-color: rgba(172, 65, 66, 1);
