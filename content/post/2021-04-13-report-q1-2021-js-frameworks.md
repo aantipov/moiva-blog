@@ -1,6 +1,6 @@
 {
     "title": "Q1 2021 State Of JavaScript Libraries and Tools: Frameworks",
-    "date": "2021-04-12",
+    "date": "2021-04-13",
     "url": "2021-q1-state-of-js-frameworks",
     "summary": "JavaScript Frameworks statistics and trends in Q1 2020: Npm Downloads, GitHub Stars, Google Trends, Releases, and more."
 }
