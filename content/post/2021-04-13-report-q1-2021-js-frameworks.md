@@ -24,19 +24,19 @@ Data for the report came from:
 - [ThoughtWorks](https://www.thoughtworks.com/)'s Technology Radar data
 
 ## Metrics
-- *Stars* - a total number of GitHub stars on April 1 2021.
+- *Stars* - the total number of GitHub stars as of April 1, 2021.
 - *New Stars* - a number of new stars in Q1 2021.
 - *New Stars, %* - (100 * New Stars) / (Stars - New Stars)
 - *NPM Downloads monthly* - an average monthly npm downloads number in Q1 2021.
 - *NPM Downloads monthly % (incr.)* - an increase of the average monthly npm downloads number compared to Q4 2020.
-- *Search Interest, %* - Google search interest average number compared to other frameworks for the period 01.10.2020-31.03.2021.
+- *Search Interest, %* - Google search interest average number compared to other frameworks in the 01.10.2020-31.03.2021 period.
 - *Developer Usage, %* - percentage of developers using a framework according to the latest StateOfJS 2020 survey.
 - *ThoughtWorks Tech Radar* - a "ring" where a framework was put. ThoughtWorks distinguishes four rings - "*Adopt*", "*Trial*", "*Assess*", and "*Hold*". You can learn more about the Radar [here](https://www.thoughtworks.com/radar/faq).
 - *NPM Releases* - a number of NPM releases in Q1 2021.
 - *Commits* - a number of commits in Q1 2021.
 - *Contributors* - a number of contributors in Q1 2021.
 - *Dependencies* - a number of NPM packages a framework has in its dependencies list.
-- *Types* - are typings bundled or they are part of a separate `@types/<npm-package>` package.
+- *Types* - the way typings are provided, either bundled with the package (`BUNDLED`) or published to the [@types](https://www.npmjs.com/~types) organization on npm (`SEPARATE`).
 - *Bundle Size* - gzipped bundle size of an npm package.
 - *Age*
 - *License*
@@ -44,8 +44,8 @@ Data for the report came from:
 ## Awards
 - [Vue](https://github.com/vuejs/vue) with 182K stars is a winner in "*Stars*" metric. [React](https://github.com/facebook/react) is lagging behind a bit with 167K stars.
 - [React](https://github.com/facebook/react) is a winner in "*New Stars*" metric and got 5.5k stars in Q1 2021. [Svelte](https://github.com/sveltejs/svelte) with 5.3k stars stays close.
-- [Alpine.js](https://github.com/alpinejs/alpine) got a biggest increase in stars - 21%.
-- [React](https://github.com/facebook/react) was downloaded 42M times on average every month. No one can compete with React here. The closest [Angular](https://github.com/angular/angular) has "only" 10M downloads.
+- [Alpine.js](https://github.com/alpinejs/alpine) got the biggest relative increase in stars - 21%.
+- [React](https://github.com/facebook/react) was being downloaded 42M times on average every month. No one could compete with React here. The closest [Angular](https://github.com/angular/angular) has "only" 10M downloads.
 - [Solid](https://github.com/ryansolid/solid) got 205% increase in NPM downloads and is a winner in the category. [Alpine.js](https://github.com/alpinejs/alpine) and [Inferno](https://github.com/infernojs/inferno) with 65% increase share 2nd and 3rd places.
 - [Angular](https://github.com/angular/angular) is a certain leader in "*Commits*" and "*Contributors*" categories. Its repository got 709 commits from 30 contributors.
 - [Marko](https://github.com/marko-js/marko) released 41 versions of its NPM package and became a winner in "*Releases*" category.
@@ -53,7 +53,7 @@ Data for the report came from:
 ## Report
 *Hint*: scroll horizontally to see values for all the frameworks.
 
-Each frameworks has two links - Moiva and GitHub links. Use Moiva link to see more data about a particular framework, see historical data and trends.
+Each frameworks has two links - Moiva and GitHub links. Use Moiva link to see more data about a particular framework, to see historical data and trends.
 
 <style type='text/css'>
 .wrapper-2021q1 {
