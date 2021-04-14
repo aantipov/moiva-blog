@@ -189,18 +189,18 @@ Each frameworks has two links - Moiva and GitHub links. Use Moiva link to see mo
 
 ## Popularity: GitHub Stars
 
-![a bar chart showing numbers of JavaScript frameworks GitHub stars in total](/blog/images/2021-q1-report/fw/stars.png)
-![a bar chart showing numbers of JavaScript frameworks new stars in Q1 2021](/blog/images/2021-q1-report/fw/new-stars.png)
-![a bar chart showing percentage of JavaScript frameworks new stars in Q1 2021 compared to the total value](/blog/images/2021-q1-report/fw/new-stars-percentage.png)
+![a bar chart showing numbers of JavaScript frameworks GitHub stars in total](/blog/images/2021-q1-report/state/stars.png)
+![a bar chart showing numbers of JavaScript frameworks new stars in Q1 2021](/blog/images/2021-q1-report/state/new-stars.png)
+![a bar chart showing percentage of JavaScript frameworks new stars in Q1 2021 compared to the total value](/blog/images/2021-q1-report/state/new-stars-percentage.png)
 
 ## Popularity: NPM Downloads
-![a bar chart showing numbers of JavaScript frameworks monthly npm downloads in Q1 2021](/blog/images/2021-q1-report/fw/npm-downloads.png)
-![a bar chart showing percentage of JavaScript frameworks monthly npm downloads in Q1 2021 compared to the value in Q4 2020](/blog/images/2021-q1-report/fw/npm-downloads-percentage.png)
+![a bar chart showing numbers of JavaScript frameworks monthly npm downloads in Q1 2021](/blog/images/2021-q1-report/state/npm-downloads.png)
+![a bar chart showing percentage of JavaScript frameworks monthly npm downloads in Q1 2021 compared to the value in Q4 2020](/blog/images/2021-q1-report/state/npm-downloads-percentage.png)
 
 ## Development Activity: commits, releases, and contributors
-![a bar chart showing numbers of JavaScript frameworks commits in Q1 2021](/blog/images/2021-q1-report/fw/commits.png)
-![a bar chart showing numbers of JavaScript frameworks releases in Q1 2021](/blog/images/2021-q1-report/fw/npm-releases.png)
-![a bar chart showing numbers of JavaScript frameworks contributors in Q1 2021](/blog/images/2021-q1-report/fw/contributors.png)
+![a bar chart showing numbers of JavaScript frameworks commits in Q1 2021](/blog/images/2021-q1-report/state/commits.png)
+![a bar chart showing numbers of JavaScript frameworks releases in Q1 2021](/blog/images/2021-q1-report/state/npm-releases.png)
+![a bar chart showing numbers of JavaScript frameworks contributors in Q1 2021](/blog/images/2021-q1-report/state/contributors.png)
 
 ---
 
