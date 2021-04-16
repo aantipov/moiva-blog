@@ -8,13 +8,13 @@
 ![](/blog/images/2021-q1-report/logo.png)
 
 ## Intro
-This is a second report in the series "Q1 2021 State Of JavaScript Libraries and Tools".
-The [previous report](https://moiva.io/blog/2021-q1-state-of-js-frameworks) was dedicated to UI Frameworks.
-The current report covers State Management libraries and provides insights into how the libraries performed in Q1 2021. Multiple data sources and metrics are used to provide a more complete picture.
+This is a third report in the series "Q1 2021 State Of JavaScript Libraries and Tools".
+The previous reports were dedicated to [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks) and [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management).
+The current report covers unit testing frameworks and libraries and provides insights into how the libraries performed in Q1 2021. Multiple data sources and metrics are used to provide a complete and unbiased picture.
 
 I used [Moiva](http://moiva.io/) to collect all the interesting data and presented it in a table as well as in charts.
 
-I'm going to prepare a few more similar reports dedicated to other categories - CSS Frameworks, End-to-End Testing Libraries, Node.js frameworks, Build Tools and Bundlers, Testing Frameworks and Static Site Generators.
+I'm going to prepare a few more similar reports dedicated to other categories - CSS Frameworks, End-to-End Testing Libraries, Node.js frameworks, Build Tools and Bundlers, and Static Site Generators. Hence, stay tuned!
 
 ## Data Sources
 Data for the report came from:
