@@ -44,12 +44,12 @@ Data for the report came from:
 - *License*
 
 ## Awards
-- [Jest](https://github.com/facebook/jest) with 35K stars is a winner in the "*Total Amount Of Stars*" category.
+- [Jest](https://github.com/facebook/jest) has 35K stars in total and is a winner in the "*Total Amount Of Stars*" category.
 - [Jest](https://github.com/facebook/jest) justifies the title of the most popular testing framework and gets the biggest amount of new stars in Q1 2021 - 1.2K stars. [React Testing Library](https://github.com/testing-library/react-testing-library) follows Jest with 766 new stars.
-- [jest-dom](https://github.com/testing-library/jest-dom)' amount of stars increased by 10%. It was the biggest increase amonth the libraries in this report.
-- [Jest](https://github.com/facebook/jest) is an absolute leader in "NPM Downloads" category. It has been downloaded a hefty 45M times on average every month. [Mocha](https://github.com/mochajs/mocha) is second with 21M monthly downloads.
-- [Cucumber.js](https://github.com/cucumber/cucumber-js) is leader in terms of NPM downloads growth - 140%. Worth mentioning, that Cucumber.js had the lowest start among other libraries in the report - less than 100k monthly downloads in Q4 2020. That partly explains such impressive growth.
-- [Jest](https://github.com/facebook/jest) got the bigest amount of commits in Q1 2021 - 76.
+- [jest-dom](https://github.com/testing-library/jest-dom)' amount of stars increased by 10%. It was the biggest increase among the libraries in this report.
+- [Jest](https://github.com/facebook/jest) is an absolute leader in the "NPM Downloads" category. It has been downloaded a hefty 45M times on average every month. [Mocha](https://github.com/mochajs/mocha) is second with 21M monthly downloads.
+- [Cucumber.js](https://github.com/cucumber/cucumber-js) is a leader in terms of NPM downloads growth - 140%. Worth mentioning, that Cucumber.js had the lowest start among other libraries in the report - less than 100k monthly downloads in Q4 2020. That partly explains such impressive growth.
+- [Jest](https://github.com/facebook/jest) got the biggest amount of commits in Q1 2021 - 76.
 - [Chai](https://github.com/chaijs/chai) had the biggest number of contributors - 12. [Ava](https://github.com/avajs/ava) and [Karma](https://github.com/karma-runner/karma) had one contributor less.
 - [Karma](https://github.com/karma-runner/karma) released the biggest number of NPM versions - 12. [DOM Testing Library](https://github.com/testing-library/dom-testing-library) follows Karma with 10 releases.
 
