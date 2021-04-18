@@ -8,7 +8,6 @@
 ![](/blog/images/2021-q1-report/logo.png)
 
 ## Intro
-// TODO:
 
 ## Data Sources
 Data for the report came from:
