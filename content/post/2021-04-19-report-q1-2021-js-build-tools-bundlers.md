@@ -5,7 +5,7 @@
     "summary": "JavaScript Build Tools and Module Bundlers statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
 }
 
-![](/blog/images/2021-q1-report/logo.png)
+![](/blog/images/2021-q1-report/logo.png?v1)
 
 ## Intro
 The landscape of JavaScript build tools and module bundlers is very dynamic at the moment. Developers experiment with new approaches. Some of them look very promising and already got traction in the community.
