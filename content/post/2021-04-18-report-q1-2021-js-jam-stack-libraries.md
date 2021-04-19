@@ -2,6 +2,7 @@
     "title": "Q1 2021 Static Site Generators (JAMStack) report",
     "date": "2021-04-18",
     "url": "2021-q1-report-js-jamstack",
+    "draft": true,
     "summary": "Static Site Generators (JAMStack) statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
 }
 

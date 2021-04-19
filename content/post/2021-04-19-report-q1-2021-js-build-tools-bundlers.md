@@ -1,6 +1,6 @@
 {
     "title": "Q1 2021 JavaScript Build Tools and Module Bundlers report",
-    "date": "2021-04-18",
+    "date": "2021-04-19",
     "url": "2021-q1-report-js-build-tools-bundlers",
     "summary": "JavaScript Build Tools and Module Bundlers statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
 }
@@ -10,9 +10,9 @@
 ## Intro
 The landscape of JavaScript build tools and module bundlers is very dynamic at the moment. Developers experiment with new approaches. Some of them look very promising and already got traction in the community.
 
-Hence, I thought that area of JavaScript ecosystem deserves a closer look at it. It would be interesting to look at those tools from different angles and compare them side by side.
+Hence, I thought that area of JavaScript ecosystem deserves a closer look at it. It would be interesting to capture a short period of time, Q1 2021, and see what were the dynamics, have look at the tools from different angles and see how they performed, compare them side by side.
 
-I used the same approach and the same data as in other reports dedicated to JavaScript ecosystem. If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries), [Static Site Generators (JAMStack)](https://moiva.io/blog/2021-q1-report-js-jamstack), [E2E Testing and Browser Automation Tools](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks).
+I used the same approach and the same data sources as in other reports dedicated to JavaScript ecosystem. If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries).
 
 ## Data Sources
 Data for the report came from:
@@ -200,11 +200,11 @@ Each library has two links - Moiva and GitHub links. Use Moiva link to see more 
 
 ![a bar chart showing numbers of JavaScript libraries' GitHub stars in total](/blog/images/2021-q1-report/bundlers/stars.png)
 
-The situation changes quickly though and new tools gain popularity at lightning speed. [Vite](https://github.com/vitejs/vite), a year-old project, has already acquired 24k stars and doesn't show any signs of slowing down - it obtained the biggest number of stars in Q1 2021, 9.4K stars.
+The situation changes quickly though and new tools gain popularity at lightning speed. [Vite](https://github.com/vitejs/vite), a year-old project, has already acquired 24k stars and doesn't show any signs of slowing down - it obtained a phenomenal number of stars in Q1 2021, 9.4K stars.
 
 ![a bar chart showing numbers of JavaScript libraries' new stars in Q1 2021](/blog/images/2021-q1-report/bundlers/new-stars.png)
 
-[Vite](https://github.com/vitejs/vite) is not only a leader in absolute growth (by GitHub stars), but it is also a leader in relative growth. It grew by 68%.
+[Vite](https://github.com/vitejs/vite) is not only a leader in absolute growth (by GitHub stars), but it is also a leader in relative growth. It grew by 68% in Q1 2021.
 
 [Esbuild](https://github.com/evanw/esbuild) also grew significantly by 38%.
 
@@ -220,7 +220,7 @@ The situation changes quickly though and new tools gain popularity at lightning 
 ![a bar chart showing percentage of JavaScript libraries monthly npm downloads in Q1 2021 compared to the value in Q4 2020](/blog/images/2021-q1-report/bundlers/npm-downloads-percentage.png)
 
 ## Development Activity: commits, releases, and contributors
-[Vite](https://github.com/vitejs/vite) is leading in almost every metric. The same with Development Activity - it got an astonishing amount of commits, 1002 (that is 11 commits per day on average).
+[Vite](https://github.com/vitejs/vite) is leading in almost every metric. The same with Development Activity metric. In Q1 2021 Vite got an astonishing amount of commits, 1002 commits, that is 11 commits per day on average.
 The commits came from 58 contributors.
 ![a bar chart showing numbers of JavaScript libraries commits in Q1 2021](/blog/images/2021-q1-report/bundlers/commits.png)
 
@@ -229,7 +229,7 @@ The commits came from 58 contributors.
 ![a bar chart showing numbers of JavaScript libraries contributors in Q1 2021](/blog/images/2021-q1-report/bundlers/contributors.png)
 
 ## Further Reading
-If you want to see how the tools compare to each other in terms of functionality, I recommend reading [this](https://css-tricks.com/comparing-the-new-generation-of-build-tools/) nice recently published article.
+If you want to see a comparison of the tools in terms of functionality, I recommend reading this nice recently published article [https://css-tricks.com/comparing-the-new-generation-of-build-tools/](https://css-tricks.com/comparing-the-new-generation-of-build-tools/).
 
 ---
 
