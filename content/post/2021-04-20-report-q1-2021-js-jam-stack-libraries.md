@@ -1,14 +1,18 @@
 {
     "title": "Q1 2021 Static Site Generators (JAMStack) report",
-    "date": "2021-04-18",
+    "date": "2021-04-19T16:59:56.183Z",
     "url": "2021-q1-report-js-jamstack",
-    "draft": true,
     "summary": "Static Site Generators (JAMStack) statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
 }
 
-![](/blog/images/2021-q1-report/logo.png)
+![](/blog/images/2021-q1-report/logo.png?v1)
 
 ## Intro
+It was 5 years ago when [Matt Biilmann](https://twitter.com/biilmann), CEO and Co-founder of Netlify, [announced](https://vimeo.com/163522126) the concept of JAMStack. The concept proved to be very useful for many use cases.
+
+JAMStack approach continues conquering the world. Probably all major frontend frameworks support now server-side rendering out of the box and there are solutions that simplify buidling JAMStack websites with a frontend framework of your choice.
+
+JAMStack tooling continue to evolve and mature. With this report I wanted to show the current state of JAMStack tools, their stats and trends based on fresh Q1 2021 data. To make a picture more complete I aggregated data from different authoritive resources.
 
 ## Data Sources
 Data for the report came from:
