@@ -14,6 +14,8 @@ JAMStack approach continues conquering the world. Probably all major frontend fr
 
 JAMStack tooling continues to evolve and mature. With this report, I wanted to show the current state of JAMStack tools, their stats, and trends based on fresh Q1 2021 data. To make a picture more complete I aggregated data from different authoritative resources.
 
+If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries), [Build Tools and Module Bundlers](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers), and [End-to-End Testing Frameworks](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks).
+
 ## Data Sources
 Data for the report came from:
 - [NPM](https://www.npmjs.com/) - libraries downloads, releases, types, and dependencies.

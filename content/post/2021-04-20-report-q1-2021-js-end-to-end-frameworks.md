@@ -14,7 +14,7 @@ Choosing is always betting. How to bet best? How can one know which tools are po
 
 I wanted to answer such questions and prepared a report covering Q1 2021 period. The report uses data aggregated from many different authoritive data sources, like [ThoughtWorks](https://www.thoughtworks.com/) and [Snyk](https://snyk.io/).
 
-If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries), [Build Tools and Module Bundlers](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers).
+If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries), [Build Tools and Module Bundlers](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers), and [Static Sites Generators (JAMStack)](https://moiva.io/blog/2021-q1-report-js-jamstack).
 
 ## Data Sources
 Data for the report came from:

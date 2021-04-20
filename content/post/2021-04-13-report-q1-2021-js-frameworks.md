@@ -7,6 +7,8 @@
 
 ![](/blog/images/2021-q1-report/logo.png)
 
+*2020-04-20 Update: I've published reports for other categories as well and recommend checking them out: [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries), [Build Tools and Module Bundlers](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers), [Static Sites Generators (JAMStack)](https://moiva.io/blog/2021-q1-report-js-jamstack), and [End-to-End Testing Frameworks](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks).*
+
 ## Intro
 The first quarter of 2021 is already behind us and I thought why not to delight the public with the results of how JavaScript libraries performed in Q1 2021.
 

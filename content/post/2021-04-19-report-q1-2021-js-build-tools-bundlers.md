@@ -12,7 +12,11 @@ The landscape of JavaScript build tools and module bundlers is very dynamic at t
 
 Hence, I thought that area of JavaScript ecosystem deserves a closer look at it. It would be interesting to capture a short period of time, Q1 2021, and see what were the dynamics, have look at the tools from different angles and see how they performed, compare them side by side.
 
-I used the same approach and the same data sources as in other reports dedicated to JavaScript ecosystem. If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries).
+I used the same approach and the same data sources as in other reports dedicated to JavaScript ecosystem.
+
+If interested, I recommend checking out other reports as well: [Frontend Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks), [State Management Libraries](https://moiva.io/blog/2021-q1-report-state-management), [Testing Frameworks](https://moiva.io/blog/2021-q1-report-js-testing-libraries), [Static Sites Generators (JAMStack)](https://moiva.io/blog/2021-q1-report-js-jamstack),
+and [End-to-End Testing Frameworks](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks).
+
 
 ## Data Sources
 Data for the report came from:
