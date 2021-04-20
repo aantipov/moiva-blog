@@ -2,7 +2,7 @@
     "title": "Q1 2021 State Of JavaScript Libraries and Tools: State Management",
     "date": "2021-04-14",
     "url": "2021-q1-report-state-management",
-    "summary": "JavaScript State Management Libraries statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Releases, and more."
+    "summary": "JavaScript State Management Libraries statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Releases, and more. Find out if the popular state management solutions are still relevant and what are the new trendy projects you might need to consider using."
 }
 
 ![](/blog/images/2021-q1-report/logo.png?v1)

@@ -2,7 +2,7 @@
     "title": "Q1 2021 JavaScript Testing Libraries and Frameworks Report",
     "date": "2021-04-16",
     "url": "2021-q1-report-js-testing-libraries",
-    "summary": "JavaScript Testing Libraries and Frameworks statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Releases, and more."
+    "summary": "JavaScript Testing Libraries and Frameworks statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Releases, and more. Is Jest still a thing? What is the state of Enzyme? Find the answers in this report."
 }
 
 ![](/blog/images/2021-q1-report/logo.png?v1)
