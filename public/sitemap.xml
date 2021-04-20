@@ -4,7 +4,22 @@
   
   <url>
     <loc>https://moiva.io/blog/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks/</loc>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moiva.io/blog/2021-q1-report-js-jamstack/</loc>
+    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
