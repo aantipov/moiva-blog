@@ -1,6 +1,6 @@
 {
     "title": "Q1 2021 JavaScript End-to-end Testing frameworks report",
-    "date": "2021-04-19T16:58:56.183Z",
+    "date": "2021-04-20",
     "url": "2021-q1-report-end-to-end-testing-frameworks",
     "summary": "JavaScript End-to-end Testing frameworks statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
 }
