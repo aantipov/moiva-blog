@@ -2,7 +2,7 @@
     "title": "Q1 2021 JavaScript Build Tools and Module Bundlers report",
     "date": "2021-04-19",
     "url": "2021-q1-report-js-build-tools-bundlers",
-    "summary": "JavaScript Build Tools and Module Bundlers statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
+    "summary": "JavaScript Build Tools and Module Bundlers statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more. Are there alternatives to Webpack? What other tools do developers like and use to build their applications? Find the answers in this report."
 }
 
 ![](/blog/images/2021-q1-report/logo.png?v1)
