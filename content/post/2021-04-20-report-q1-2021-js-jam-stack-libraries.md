@@ -2,7 +2,7 @@
     "title": "Q1 2021 Static Site Generators (JAMStack) report",
     "date": "2021-04-20",
     "url": "2021-q1-report-js-jamstack",
-    "summary": "Static Site Generators (JAMStack) statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more."
+    "summary": "Static Site Generators (JAMStack) statistics and trends in Q1 2021: Npm Downloads, GitHub Stars, Google Trends, Security, Releases, and more. What is the state of JAMStack tools? Which frameworks are worth considering for your next project?"
 }
 
 ![](/blog/images/2021-q1-report/logo.png?v1)
@@ -39,7 +39,7 @@ Data for the report came from:
 - *Contributors* - a number of contributors in Q1 2021.
 - *Dependencies* - a number of NPM packages a library has in its dependencies list.
 - *Types* - the way typings are provided, either bundled with the package (`BUNDLED`) or published to the [@types](https://www.npmjs.com/~types) organization on npm (`SEPARATE`).
-- *Security* - calculated by [Snyk](https://snyk.io/) level of security (from `A` to `F`) of Npm packages based on the number of vulnerabilities and their severity. `A` - no vulnerabilities, `F` - the least secure level.
+- *Security* - calculated by [Snyk](https://snyk.io/) a level of security (from `A` to `F`) of Npm packages based on the number of vulnerabilities and their severity. `A` - no vulnerabilities, `F` - the least secure level.
 - *Age*
 - *License*
 
