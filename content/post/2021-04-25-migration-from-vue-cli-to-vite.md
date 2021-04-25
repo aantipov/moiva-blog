@@ -184,7 +184,7 @@ Turned out the migration went very easy, almost seamless.
 
 As a result, I got huge improvements in the development process, less dependencies to care about, decreased deployment time (from 2 min to 1 min), and slighly smaller production bundles.
 
-Amazing work was done by [Evan You](@youyuxi), the author of Vite and VueJS. I can't stop being amazed by the work that guy is doing. Always mind-blowing!
+Amazing work was done by [Evan You](https://twitter.com/youyuxi), the author of Vite and VueJS. I can't stop being amazed by the work that guy is doing. Always mind-blowing!
 
 -----
 
