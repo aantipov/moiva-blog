@@ -43,8 +43,9 @@ Vite was created to achieve fast development feedback loop and it cleary succeed
 There are other substantial side benefits as well.
 - Vite significantly simplifies development setup. You can throw away Webpack, Babel and Vue CLI with their plugins, loaders and complex configurations.
 - Smaller production builds thanks to Rollup which Vite uses under the hood.
+- Faster deployments due to decreased build time.
 
-## Migration: Step 1 - Install required dependencies
+## Step 1 - Install required dependencies
 In order to find out what dependencies need to be installed I bootstraped a new project with `npm init @vitejs/app` and followed the prompts.
 
 Then I looked into the created `package.json` file:
@@ -78,7 +79,7 @@ That file tells us that besides `vite` package we need to install the following 
 
 I installed the required dependencies in my project.
 
-## Migration: Step 2 - Add Vite configuration file
+## Step 2 - Add Vite configuration file
 I copied the generated `vite.config.ts` to my project.
 
 ```ts
@@ -98,7 +99,7 @@ export default defineConfig({
 });
 ```
 
-## Migration: Step 3 - Move index.html to the root folder
+## Step 3 - Move index.html to the root folder
 Vite [treats](https://vitejs.dev/guide/#index-html-and-project-root) `index.html` as the entry point to your application and it should be put to the root folder.
 
 Hence I moved my `index.html` from `/public` to `/` folder.
@@ -109,7 +110,7 @@ The only change to the `index.html` I made was specifying a link to the entry po
 </body>
 ```
 
-## Migration: Step 4 - Adjust tailwind.config.ts
+## Step 4 - Adjust tailwind.config.ts
 Migration to Vite broke styling of my application. It worked perfectly fine in development environment, but styling was partly broken in production builds. 
 
 I figured out soon that it was caused be the move of the `index.html` file - Tailwind stopped considering that file while collecting the used classes. Hence style definitions for classes from that file were not included in the production build. 
@@ -127,7 +128,7 @@ module.exports = {
 
 ```
 
-## Migration: Step 2 - Adjust tsconfig.ts
+## Step 5 - Adjust tsconfig.ts
 I looked into the generated `tsconfig.json` file
 
 ```json
@@ -149,13 +150,41 @@ I looked into the generated `tsconfig.json` file
 ```
 and adjusted my `tsconfig.json` file accordingly.
 
-## Migration: Step 1 - Install required dependencies
+## Step 6 - Adjust npm tasks
+I used generated `package.json` (from Step 1) to adjust the tasks to build, preview and start the server:
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vue-tsc --noEmit && vite build",
+  "serve": "vite preview"
+}
+```
+`"build"` task includes `vue-tsc --moEmit` command to type check the code.
+
+I also had to adjust the `lint` task and run `eslint` directly instead of relying on Vue CLI: `"lint": "vue-cli-service lint"` became `"lint": "eslint --ext .ts,.js,.vue"`.
+
+Having done that, I accomplished "feature parity" with the previous setup. The app can now be developed, built and deployed.
+
+We just need not to forget to do one last thing.
+
+## Final Step - Cleanup
+We are almost there. The only thing left is to remove the dependencies which are no longer needed.
+
+I removed Vue CLI and its plugins, and core-js. The result was impressive: `package-lock.json` file became lighter by ~35k lines.
+
+![a screenshot from GitHub showing the amount of changes made to package-lock.file](/blog/images/2021-04-vue-cli-to-vite/lockfile.png)
 
 
-## Migration: Step X - Tasks
+## Conclusion
+At first, I didn't believe in the success of the endeavour. 
 
-## Migration: Step X - Cleanup
+Vite is still a very young project (1 year old) and to replace such a huge chunk of the development setup (Webpack and Babel with their plugins/loaders) seemed to be impossible to achieve.
 
+Turned out the migration went very easy, almost seamless.
+
+As a result, I got huge improvements in the development process, less dependencies to care about, decreased deployment time (from 2 min to 1 min), and slighly smaller production bundles.
+
+Amazing work was done by [Evan You](@youyuxi), the author of Vite and VueJS. I can't stop being amazed by the work that guy is doing. Always mind-blowing!
 
 -----
 
