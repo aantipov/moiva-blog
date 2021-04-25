@@ -45,6 +45,115 @@ There are other substantial side benefits as well.
 - Smaller production builds thanks to Rollup which Vite uses under the hood.
 
 ## Migration: Step 1 - Install required dependencies
+In order to find out what dependencies need to be installed I bootstraped a new project with `npm init @vitejs/app` and followed the prompts.
+
+Then I looked into the created `package.json` file:
+
+```json
+{
+  "name": "new-vite-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.5",
+    "typescript": "^4.1.3",
+    "vite": "^2.1.5",
+    "vue-tsc": "^0.0.24"
+  }
+}
+```
+
+That file tells us that besides `vite` package we need to install the following packages:
+- `@vitejs/plugin-vue` to support development of VueJS based projects
+- `@vue/compiler-sfc` to teach the bundler understand VueJS single file components. You don't need to install this package explicitly if you are using NPM v7 because NPM will install it automatically as a peer dependency of `@vitejs/plugin-vue`.
+- `typescript` and `vue-tsc` for types checking using command line. You may skip these dependencies if you rely on types checking using IDE.
+
+I installed the required dependencies in my project.
+
+## Migration: Step 2 - Add Vite configuration file
+I copied the generated `vite.config.ts` to my project.
+
+```ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()]
+})
+```
+The only adjustment I did here was adding the `@` alias (similar to [Webpack aliases](https://webpack.js.org/configuration/resolve/#resolvealias)).
+```ts
+export default defineConfig({
+  resolve: { alias: { '@': '/src' } },
+  plugins: [vue()],
+});
+```
+
+## Migration: Step 3 - Move index.html to the root folder
+Vite [treats](https://vitejs.dev/guide/#index-html-and-project-root) `index.html` as the entry point to your application and it should be put to the root folder.
+
+Hence I moved my `index.html` from `/public` to `/` folder.
+
+The only change to the `index.html` I made was specifying a link to the entry point of my code:
+```html
+  <script type="module" src="/src/main.ts"></script>
+</body>
+```
+
+## Migration: Step 4 - Adjust tailwind.config.ts
+Migration to Vite broke styling of my application. It worked perfectly fine in development environment, but styling was partly broken in production builds. 
+
+I figured out soon that it was caused be the move of the `index.html` file - Tailwind stopped considering that file while collecting the used classes. Hence style definitions for classes from that file were not included in the production build. 
+
+The problem was fixed easily by tweaking the `tailwind.config.js` file and specifying the correct path to the `index.html` file.
+```js
+module.exports = {
+  purge: {
+    content: ['./index.html', './src/**/*.vue'],
+  },
+  theme: {...},
+  variants: {},
+  plugins: [],
+};
+
+```
+
+## Migration: Step 2 - Adjust tsconfig.ts
+I looked into the generated `tsconfig.json` file
+
+```json
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
+```
+and adjusted my `tsconfig.json` file accordingly.
+
+## Migration: Step 1 - Install required dependencies
+
+
+## Migration: Step X - Tasks
+
 ## Migration: Step X - Cleanup
 
 
