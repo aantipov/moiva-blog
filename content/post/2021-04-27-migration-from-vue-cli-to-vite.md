@@ -1,34 +1,38 @@
 {
     "title": "The missing migration guide: from Vue CLI to Vite",
-    "date": "2021-04-25",
+    "date": "2021-04-27",
     "url": "the-missing-migration-guide-from-vue-cli-to-vite",
-    "summary": "Have an existing Vue 3 + Vue CLI project and wanna try the new trendy tool from [Evan](https://twitter.com/youyuxi)? Don't know where to start? This article should help."
+    "summary": "Have an existing Vue 3 + Vue CLI project and wanna try the new trendy build tool from Evan You (author of VueJS)? This article will provide you with a guide how to do the migration."
 }
 
 ## Introduction
-I haven't updated Moiva.io npm dependencies for a while and I thought the time has come. 
+I haven't updated [Moiva.io](http://moiva.io/)'s npm dependencies for a while and I thought the time has come. 
 
 The update didn't go well though. So I came up with a "workaroud". 
 
 {{< tweet 1385326827120599041 >}}
 
-In the process of integrating [Vite](https://vitejs.dev/) I found out there is no official guide how to do it. There is a [guide](https://vitejs.dev/guide/) how to bootstrap a new project with Vite, but no guidance for exising projects.
+I thought it was a perfect time to try out [Vite](https://vitejs.dev/) and see if it can simplify the setup and fix the issue with dependencies conflicts.
 
-Hence I thought it is worth sharing the approach I took for the benefit of others interested in migrating their apps to Vite.
+I looked for an official guide how to do it and, surprisingly, I didn't find one.  There is a [guide](https://vitejs.dev/guide/) how to bootstrap a new project with Vite, but no guidance for exising projects.
 
-The migration process might vary depending on the tech stack of your project and the way it is built. Hence you might need to adjust the appoach to your needs.
+Hence I did the migration my own way and I thought it is worth sharing my approach and help others interested in migrating their apps to Vite.
 
-To bring more context to the approach I took, Moiva is a single-page application and it used the following tech stack: Vue3, Vue CLI, Webpack, Babel, core-js, ESlint, Tailwind, Typescript.
+The migration process might vary depending on the tech stack of your project and the way it is built. Hence you might need to adjust the steps to your needs.
+
+My tech stack before the migration: Vue3, Vue CLI, Webpack, Babel, core-js, ESlint, Tailwind, Typescript.
 
 Before diving into the migration steps, let's understand first what Vite is and what benefits it brings.
 
 ## What is Vite
 
-The JavaScript landscape of build tools undergoes a significant change. We see a [rise](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers) of new tools experimenting with new approaches. Some of them quickly become very popular.
+The JavaScript landscape of build tools undergoes a significant change. We see a [rise](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers) of new tools experimenting with new approaches. Some of them quickly become popular.
 
 One of such tools which really stands out is [Vite](https://github.com/vitejs/vite) which got 9.4K stars in Q1 2021 (that is 68% growth). Compare that number with 1.2K stars that [Webpack](https://github.com/webpack/webpack) got in the same period.
 
 {{< figure src="/blog/images/2021-04-vue-cli-to-vite/vite-downloads.png" alt="Moiva.io screenshot of Vite monthly downloads and GitHub stars charts" caption="Vite's npm downloads and GitHub stars statistics. Source: [Moiva.io](https://moiva.io/?npm=vite)" >}}
+
+It is worth mentioning that Vite is not tied to VueJS. It is a framework agnostic tool and there are people who already use it in their React projects.
 
 Vite essentially does 2 things:
 - provides a dev server with HMR (Hot Module Reloading)
@@ -38,9 +42,9 @@ Vite essentially does 2 things:
 
 Vite was created to achieve fast development feedback loop and it cleary succeeded in it:
 - the dev server start time is uncomparably small
-{{< figure src="/blog/images/2021-04-vue-cli-to-vite/vite-start.gif" alt="a screenshot of a browser loading individually updated files using Hot Module Reloading technique" caption="`vite` command in action" >}}
+{{< figure src="/blog/images/2021-04-vue-cli-to-vite/vite-start.gif" alt="a video of 'vite' command running in a termanial and starting a development server" caption="`vite` command in action" >}}
 
-- code changes are reflected immediately in the browser
+- code changes are reflected immediately in the browser. Only the changed components are being reloaded. There is no need to rebuild the whole application.
 {{< figure src="/blog/images/2021-04-vue-cli-to-vite/hmr.png" alt="a screenshot of a browser loading individually updated files using Hot Module Reloading technique" caption="Chrome DevTools screenshot" >}}
 
 There are other substantial side benefits as well.
@@ -48,10 +52,22 @@ There are other substantial side benefits as well.
 - Smaller production builds thanks to Rollup which Vite uses under the hood.
 - Faster deployments due to decreased build time.
 
-## Step 1 - Install required dependencies
-In order to find out what dependencies need to be installed I bootstraped a new project with `npm init @vitejs/app` and followed the prompts.
+Let's look now how we can start using Vite.
 
-Then I looked into the created `package.json` file:
+## Step 1 - Generate a new project with Vite
+In the absence of a guide we need to start somewhere.
+
+Vite provides a command (npm package) to bootstrap new projects. Hence I thought bootstraping a new project and mimicing the setup would work for me.
+
+I run `npm init @vitejs/app` command and followed the prompts.
+
+The resulted file structure looked clear and simple.
+
+{{< figure src="/blog/images/2021-04-vue-cli-to-vite/files.png" alt="A list of files of the Vite's generated project" caption="A list of files generated by Vite" >}}
+
+## Step 2 - Install required dependencies
+
+I looked into the created `package.json` file to find out what dependencies I need to install.
 
 {{% code caption="Vite's generated `package.json` file" %}}
 ```json
@@ -77,14 +93,14 @@ Then I looked into the created `package.json` file:
 ```
 {{% /code %}}
 
-That file tells us that besides `vite` package we need to install the following packages:
+That file told me that besides `vite` I need to install the following packages:
 - `@vitejs/plugin-vue` to support development of VueJS based projects
-- `@vue/compiler-sfc` to teach the bundler understand VueJS single file components. You don't need to install this package explicitly if you are using NPM v7 because NPM will install it automatically as a peer dependency of `@vitejs/plugin-vue`.
-- `typescript` and `vue-tsc` for types checking using command line. You may skip these dependencies if you rely on types checking using IDE.
+- `@vue/compiler-sfc` to teach the bundler understand VueJS single file components. You don't need to install this package explicitly if you use NPM v7 because NPM will install it automatically as a peer dependency of `@vitejs/plugin-vue`.
+- `typescript` and `vue-tsc` for types checking using command line. You may skip these dependencies if you rely on types checking in your IDE (Vue doesn't use `typescript` to build the project).
 
 I installed the required dependencies in my project.
 
-## Step 2 - Add Vite configuration file
+## Step 3 - Add Vite configuration file
 I copied the generated `vite.config.ts` to my project.
 
 {{% code caption="Vite's generated `vite.config.ts` file" %}}
@@ -99,7 +115,7 @@ export default defineConfig({
 ```
 {{% /code %}}
 
-The only adjustment I did here was adding the `@` alias (similar to [Webpack aliases](https://webpack.js.org/configuration/resolve/#resolvealias)).
+The only adjustment I did there was adding the `@` alias (similar to [Webpack aliases](https://webpack.js.org/configuration/resolve/#resolvealias)). I needed that change because I use `@` alias in `import` statements in my app.
 {{% code caption="`vite.config.ts` file with my changes" %}}
 ```ts
 export default defineConfig({
@@ -109,7 +125,7 @@ export default defineConfig({
 ```
 {{% /code %}}
 
-## Step 3 - Move index.html to the root folder
+## Step 4 - Move index.html to the root folder
 Vite [treats](https://vitejs.dev/guide/#index-html-and-project-root) `index.html` as the entry point to your application and it should be put to the root folder.
 
 Hence I moved my `index.html` from `/public` to `/` folder.
@@ -122,10 +138,10 @@ The only change to the `index.html` I made was specifying a link to the entry po
 ```
 {{% /code %}}
 
-## Step 4 - Adjust tailwind.config.ts
+## Step 5 - Adjust tailwind.config.ts
 Migration to Vite broke styling of my application. It worked perfectly fine in development environment, but styling was partly broken in production builds. 
 
-I figured out soon that it was caused be the move of the `index.html` file - Tailwind stopped considering that file while collecting the used classes. Hence style definitions for classes from that file were not included in the production build. 
+I figured out soon that it was caused by the location change of `index.html` file - Tailwind stopped considering that file while collecting the classes in use. Hence style definitions for classes from that file were not included in the production build. 
 
 The problem was fixed easily by tweaking the `tailwind.config.js` file and specifying the correct path to the `index.html` file.
 {{% code caption="`tailwind.config.js`" %}}
@@ -142,7 +158,7 @@ module.exports = {
 ```
 {{% /code %}}
 
-## Step 5 - Adjust tsconfig.ts
+## Step 6 - Adjust tsconfig.ts
 I looked into the generated `tsconfig.json` file
 
 {{% code caption="Vite's generated `tsconfig.json` file" %}}
@@ -167,8 +183,8 @@ I looked into the generated `tsconfig.json` file
 
 and adjusted my `tsconfig.json` file accordingly.
 
-## Step 6 - Adjust npm tasks
-I used generated `package.json` (from Step 1) to adjust the tasks to build, preview and start the server:
+## Step 7 - Adjust npm tasks
+I used the generated `package.json` to adjust my npm tasks to build, preview and start the server:
 {{% code caption="Npm tasks from the Vite's generated `package.json` file" %}}
 ```json
 "scripts": {
@@ -183,9 +199,9 @@ I used generated `package.json` (from Step 1) to adjust the tasks to build, prev
 
 I also had to adjust the `lint` task and run `eslint` directly instead of relying on Vue CLI: `"lint": "vue-cli-service lint"` became `"lint": "eslint --ext .ts,.js,.vue"`.
 
-Having done that, I accomplished "feature parity" with the previous setup. The app can now be developed, built and deployed.
+Having done that, I accomplished "feature parity" with the previous setup - the app could be developed, built and deployed.
 
-We just need not to forget to do one last thing.
+I just needed to do one small but important thing.
 
 ## Final Step - Cleanup
 We are almost there. The only thing left is to remove the dependencies which are no longer needed.
@@ -193,6 +209,8 @@ We are almost there. The only thing left is to remove the dependencies which are
 I removed Vue CLI and its plugins, and core-js. The result was impressive: `package-lock.json` file became lighter by ~35k lines.
 
 {{< figure src="/blog/images/2021-04-vue-cli-to-vite/lockfile.png" alt="A screenshot from my pull request showing the amount of changes made to package-lock.file" caption="A screenshot from my pull request with the number of changes to `package-lock.json` file" >}}
+
+I also removed `babel.config.js` and `vue.config.js` files, they became obsolete.
 
 ## Conclusion
 At first, I didn't believe in the success of the endeavour. 
@@ -203,7 +221,7 @@ Turned out the migration went very easy, almost seamless.
 
 As a result, I got huge improvements in the development process, less dependencies to care about, decreased deployment time (from 2 min to 1 min), and slighly smaller production bundles.
 
-Amazing work was done by [Evan You](https://twitter.com/youyuxi), the author of Vite and VueJS. I can't stop being amazed by the work that guy is doing. Always mind-blowing!
+[Evan You](https://twitter.com/youyuxi), the author of Vite and VueJS, did amazing work there. I can't stop being impressed by the work he is doing. Always mind-blowing!
 
 -----
 
