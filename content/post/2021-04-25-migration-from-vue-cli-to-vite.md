@@ -28,7 +28,7 @@ The JavaScript landscape of build tools undergoes a significant change. We see a
 
 One of such tools which really stands out is [Vite](https://github.com/vitejs/vite) which got 9.4K stars in Q1 2021 (that is 68% growth). Compare that number with 1.2K stars that [Webpack](https://github.com/webpack/webpack) got in the same period.
 
-![a screenshot of Vite monthly downloads and GitHub stars charts](/blog/images/2021-04-vue-cli-to-vite/vite-downloads.png)
+{{< figure src="/blog/images/2021-04-vue-cli-to-vite/vite-downloads.png" alt="Moiva.io screenshot of Vite monthly downloads and GitHub stars charts" caption="Vite's npm downloads and GitHub stars statistics. Source: [Moiva.io](https://moiva.io/?npm=vite)" >}}
 
 Vite essentially does 2 things:
 - provides a dev server with HMR (Hot Module Reloading)
@@ -38,7 +38,10 @@ Vite essentially does 2 things:
 
 Vite was created to achieve fast development feedback loop and it cleary succeeded in it:
 - the dev server start time is uncomparably small
+{{< figure src="/blog/images/2021-04-vue-cli-to-vite/vite-start.gif" alt="a screenshot of a browser loading individually updated files using Hot Module Reloading technique" caption="`vite` command in action" >}}
+
 - code changes are reflected immediately in the browser
+{{< figure src="/blog/images/2021-04-vue-cli-to-vite/hmr.png" alt="a screenshot of a browser loading individually updated files using Hot Module Reloading technique" caption="Chrome DevTools screenshot" >}}
 
 There are other substantial side benefits as well.
 - Vite significantly simplifies development setup. You can throw away Webpack, Babel and Vue CLI with their plugins, loaders and complex configurations.
@@ -50,6 +53,7 @@ In order to find out what dependencies need to be installed I bootstraped a new 
 
 Then I looked into the created `package.json` file:
 
+{{% code caption="Vite's generated `package.json` file" %}}
 ```json
 {
   "name": "new-vite-project",
@@ -71,6 +75,7 @@ Then I looked into the created `package.json` file:
   }
 }
 ```
+{{% /code %}}
 
 That file tells us that besides `vite` package we need to install the following packages:
 - `@vitejs/plugin-vue` to support development of VueJS based projects
@@ -82,6 +87,7 @@ I installed the required dependencies in my project.
 ## Step 2 - Add Vite configuration file
 I copied the generated `vite.config.ts` to my project.
 
+{{% code caption="Vite's generated `vite.config.ts` file" %}}
 ```ts
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -91,13 +97,17 @@ export default defineConfig({
   plugins: [vue()]
 })
 ```
+{{% /code %}}
+
 The only adjustment I did here was adding the `@` alias (similar to [Webpack aliases](https://webpack.js.org/configuration/resolve/#resolvealias)).
+{{% code caption="`vite.config.ts` file with my changes" %}}
 ```ts
 export default defineConfig({
   resolve: { alias: { '@': '/src' } },
   plugins: [vue()],
 });
 ```
+{{% /code %}}
 
 ## Step 3 - Move index.html to the root folder
 Vite [treats](https://vitejs.dev/guide/#index-html-and-project-root) `index.html` as the entry point to your application and it should be put to the root folder.
@@ -105,10 +115,12 @@ Vite [treats](https://vitejs.dev/guide/#index-html-and-project-root) `index.html
 Hence I moved my `index.html` from `/public` to `/` folder.
 
 The only change to the `index.html` I made was specifying a link to the entry point of my code:
+{{% code caption="My changes to `index.html` file" %}}
 ```html
   <script type="module" src="/src/main.ts"></script>
 </body>
 ```
+{{% /code %}}
 
 ## Step 4 - Adjust tailwind.config.ts
 Migration to Vite broke styling of my application. It worked perfectly fine in development environment, but styling was partly broken in production builds. 
@@ -116,6 +128,7 @@ Migration to Vite broke styling of my application. It worked perfectly fine in d
 I figured out soon that it was caused be the move of the `index.html` file - Tailwind stopped considering that file while collecting the used classes. Hence style definitions for classes from that file were not included in the production build. 
 
 The problem was fixed easily by tweaking the `tailwind.config.js` file and specifying the correct path to the `index.html` file.
+{{% code caption="`tailwind.config.js`" %}}
 ```js
 module.exports = {
   purge: {
@@ -127,10 +140,12 @@ module.exports = {
 };
 
 ```
+{{% /code %}}
 
 ## Step 5 - Adjust tsconfig.ts
 I looked into the generated `tsconfig.json` file
 
+{{% code caption="Vite's generated `tsconfig.json` file" %}}
 ```json
 {
   "compilerOptions": {
@@ -148,10 +163,13 @@ I looked into the generated `tsconfig.json` file
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
 ```
+{{% /code %}}
+
 and adjusted my `tsconfig.json` file accordingly.
 
 ## Step 6 - Adjust npm tasks
 I used generated `package.json` (from Step 1) to adjust the tasks to build, preview and start the server:
+{{% code caption="Npm tasks from the Vite's generated `package.json` file" %}}
 ```json
 "scripts": {
   "dev": "vite",
@@ -159,6 +177,8 @@ I used generated `package.json` (from Step 1) to adjust the tasks to build, prev
   "serve": "vite preview"
 }
 ```
+{{% /code %}}
+
 `"build"` task includes `vue-tsc --moEmit` command to type check the code.
 
 I also had to adjust the `lint` task and run `eslint` directly instead of relying on Vue CLI: `"lint": "vue-cli-service lint"` became `"lint": "eslint --ext .ts,.js,.vue"`.
@@ -172,8 +192,7 @@ We are almost there. The only thing left is to remove the dependencies which are
 
 I removed Vue CLI and its plugins, and core-js. The result was impressive: `package-lock.json` file became lighter by ~35k lines.
 
-![a screenshot from GitHub showing the amount of changes made to package-lock.file](/blog/images/2021-04-vue-cli-to-vite/lockfile.png)
-
+{{< figure src="/blog/images/2021-04-vue-cli-to-vite/lockfile.png" alt="A screenshot from my pull request showing the amount of changes made to package-lock.file" caption="A screenshot from my pull request with the number of changes to `package-lock.json` file" >}}
 
 ## Conclusion
 At first, I didn't believe in the success of the endeavour. 
