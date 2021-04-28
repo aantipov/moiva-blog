@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 disableXML = true
 disableKinds = ["RSS", "section", "taxonomy", "term", "404"]
+paginate = 20
 
 [permalinks]
   post = ":title"

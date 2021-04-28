@@ -6,7 +6,7 @@
 }
 
 ## Introduction
-[Moiva.io](http://moiva.io/)'s npm dependencies haven't been updated for a while and I thought the time has come. 
+[Moiva.io](http://moiva.io/)'s npm dependencies had not been updated for a while and I thought the time has come. 
 
 The update didn't go well though. So I came up with a "workaroud". 
 
