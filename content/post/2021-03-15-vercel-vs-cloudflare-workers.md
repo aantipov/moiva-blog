@@ -5,6 +5,14 @@
     "summary": "Detailed comparison of Vercel Serverless Functions and Cloudflare Workers. Which one is better?"
 }
 
+
+{{% msg %}}
+**Update 2021-05-11**: Cloudflare released [Workers Unboud](https://blog.cloudflare.com/workers-unbound-ga/) - a solution for serverless functions that need long excecution times. It extends the existing 50ms CPU limit to 30sec and changes their billing scheme.
+{{% /msg %}}
+
+{{% msg %}}
+**Update 2021-03-29**: added an image of Vercel Edge Network map. Kudos to [@magnemg](https://twitter.com/magnemg) for creating it.
+{{% /msg %}}
 ## TLDR
 Vercel provides a good solid solution for Serverless Functions and makes the process of their creation seamless and hassle-free.
 Cloudflare Workers offer more functionality out-of-the-box (e.g. key-value data store, CRON) and look more mature and sophisticated.
@@ -217,6 +225,10 @@ I couldn't find any workaround for such a problem.
 Another problem that I found with Vercel is that you can't really log all the requests to your Function and build analytics on top of it because Functions are not executed in case there is a cached response for the request. I couldn't find a solution for it. There is no such problem with Cloudflare because its Functions get always executed on every request.
 
 ## Limits
+{{% msg %}}
+**Update 2021-05-11**: The recently released Cloudflare's [Workers Unboud](https://blog.cloudflare.com/workers-unbound-ga/) solution extends the 50ms CPU limit to 30sec. You can find more information on the Cloudflare [Limits](https://developers.cloudflare.com/workers/platform/limits#worker-limits) page.
+{{% /msg %}}
+
 |   |Cloudflare  [(link)](https://developers.cloudflare.com/workers/platform/limits) |Vercel [(link)](https://vercel.com/docs/platform/limits)  |
 |---|---|---|
 |Memory size   | 128 MB   | 1024 MB for Hobby plan and 3008 MB for Pro  |
@@ -226,6 +238,10 @@ Another problem that I found with Vercel is that you can't really log all the re
 |Function Regions   | Functions are always deployed to all available regions. No limits here  | 1 region for Hobby and Pro plans. Multiple regions for Enterprise plans.  |
 
 ## Pricing
+{{% msg %}}
+**Update 2021-05-11**: With the introduction of [Workers Unboud](https://blog.cloudflare.com/workers-unbound-ga/) solution Cloudflare changed their pricing model - the pricing now is based on the usage model of a particular worker. You can find more information on the Cloudflare [Pricing](https://developers.cloudflare.com/workers/platform/pricing#usage-models) page.
+{{% /msg %}}
+
 **Cloudflare Workers** are free to all, but subject to some limits, mainly reads/writes to Key-Value (KV) storage, limited KV storage (1 GB) and also CPU runtime limited to 10 ms. 
 
 Bundled plan for a minimum charge of $5/month includes everything that is in Free, plus increased CPU runtime (50 ms) and access to increased KV storage and reads/writes. The final price is defined by the real usage.
@@ -243,5 +259,3 @@ All plans are subject to Vercel's [Fair Use Policy](https://vercel.com/docs/plat
 Check Vercel's [pricing page](https://vercel.com/pricing) for more details.
 
 ---
-
-**Update 2021-03-29**: added an image of Vercel Edge Network map. Kudos to [@magnemg](https://twitter.com/magnemg) for creating it.
