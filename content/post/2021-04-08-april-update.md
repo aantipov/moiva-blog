@@ -5,7 +5,7 @@
     "summary": "GitHub Stars chart, Catalog page, Accessibility, React bundle size fix and more..."
 }
 
-This is a March update on Moiva.io development progress.
+This is an April update on Moiva.io development progress.
 
 ## "New GitHub Stars monthly" chart
 GitHub stars is a measure of popularity and Moiva has been showing stars counts right from the beginning. The problem though is that the bare amount of stars does not really reflect how popular a project is at the moment.
