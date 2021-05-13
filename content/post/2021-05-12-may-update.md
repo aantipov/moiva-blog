@@ -28,10 +28,10 @@ It also taught me that being able to see graphs with historical data is nice but
 
 I realized that tabular data can be a valuable complement to the charts.
 
-## Migration from VueCLI to Vite guide
-Having migrated Moiva from VueCLI to Vite I found out there is a lack of resources describing the process.
+## A guide to migrating from VueCLI to Vite
+Having migrated Moiva from VueCLI to Vite I found out there is a lack of articles describing the process.
 
-[Vite](https://vitejs.dev/) is a new and very trendy tool these days and such a guide could bring much value to Vue users.
+[Vite](https://vitejs.dev/) is a new and very trendy tool these days and such a guide could bring much value to Vue users I thought.
 
 Hence I wrote [my own guide](https://moiva.io/blog/the-missing-migration-guide-from-vue-cli-to-vite/).
 
