@@ -43,7 +43,7 @@ The idea of migration came out of the problem I met. I wanted to update project 
 
 The migration process, surprisingly, was almost seamless and the result was amazing - the startup time is next to zero, updates are reflecting instantly in the browser and I ditched __a lot__ of my existing dependencies.
 
-<!-- {{< tweet 1385326827120599041 >}} -->
+{{< tweet 1385326827120599041 >}}
 
 __Tabular data representation__. As I described above, the published series of reports taught me two things:
 - the data that Moiva has at its disposal allow extracting much more valuable information than is currently shown.
