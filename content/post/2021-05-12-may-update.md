@@ -14,12 +14,12 @@ While April was nearing, I came up with an idea - why not aggregate such data an
 The idea was interesting to me also for another reason - I considered it as a test drive for Moiva, I wanted to see what kind of valuable information can be extracted from Moiva.io and what kind of reports one can prepare.
 
 As an outcome, I published 6 reports for different categories of JavaScript libraries:
-- [Q1 2021 State of JS Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks/)
-- [Q1 2021 JavaScript State Management Libraries report](https://moiva.io/blog/2021-q1-report-state-management/)
-- [Q1 2021 JavaScript Testing Libraries and Frameworks Report](https://moiva.io/blog/2021-q1-report-js-testing-libraries/)
-- [Q1 2021 JavaScript Build Tools and Module Bundlers report](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers/)
-- [Q1 2021 Static Site Generators (JAMStack) report](https://moiva.io/blog/2021-q1-report-js-jamstack/)
-- [Q1 2021 JavaScript End-to-end Testing frameworks report](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks/)
+- [Q1 2021 State of JS Frameworks]({{< relref "./2021-04-13-report-q1-2021-js-frameworks.md" >}})
+- [Q1 2021 JavaScript State Management Libraries report]({{< relref "./2021-04-14-report-q1-2021-js-state-management.md">}})
+- [Q1 2021 JavaScript Testing Libraries and Frameworks Report]({{< relref "./2021-04-16-report-q1-2021-js-testing.md" >}})
+- [Q1 2021 JavaScript Build Tools and Module Bundlers report]({{< relref "./2021-04-19-report-q1-2021-js-build-tools-bundlers.md" >}})
+- [Q1 2021 Static Site Generators (JAMStack) report]({{< relref "./2021-04-20-report-q1-2021-js-jam-stack-libraries.md" >}})
+- [Q1 2021 JavaScript End-to-end Testing frameworks report]({{< relref "./2021-04-20-report-q1-2021-js-end-to-end-frameworks.md" >}})
 
 {{< tweet 1381917386312462339 >}}
 
@@ -33,7 +33,7 @@ Having migrated Moiva from VueCLI to Vite I found out there is a lack of article
 
 [Vite](https://vitejs.dev/) is a new and very trendy tool these days and such a guide could bring much value to Vue users I thought.
 
-Hence I wrote [my own guide](https://moiva.io/blog/the-missing-migration-guide-from-vue-cli-to-vite/).
+Hence I wrote [my own guide]({{< relref "./2021-04-28-migration-from-vue-cli-to-vite.md" >}}).
 
 ## Moiva.io updates
 __Migration to Vite__.
