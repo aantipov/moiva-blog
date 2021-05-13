@@ -1,8 +1,8 @@
 {
     "title": "May 2021 update: A series of JS libraries reports, migration to Vite",
-    "date": "2021-05-12",
+    "date": "2021-05-13",
     "url": "2021-05-update",
-    "summary": "In the previous month I implemented my idea of finding out what kind of information one can get out of Moiva and what kind of reports one can prepare."
+    "summary": "In the previous month I implemented my idea to aggregate historical data and prepare a series of Q1 2021 reports."
 }
 
 This is a monthly update on Moiva.io's development progress and other things I've been busy with.
