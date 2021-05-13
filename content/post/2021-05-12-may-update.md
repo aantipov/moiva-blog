@@ -35,9 +35,9 @@ Having migrated Moiva from VueCLI to Vite I found out there is a lack of article
 
 Hence I wrote [my own guide](https://moiva.io/blog/the-missing-migration-guide-from-vue-cli-to-vite/).
 
-## Moiva.io development updates
+## Moiva.io updates
 __Migration to Vite__.
-Vite had been on my radar for a while, but I didn't have any concrete plans to migrate to it. It didn't look to me mature enough to replace huge chunks of development setup - Webpack, Babel, etc.
+Vite had been on my radar for a while, but I didn't have any concrete plans to migrate to it. It didn't look mature enough to replace huge chunks of development setup - Webpack, Babel, etc.
 
 The idea of migration came out of the problem I met. I wanted to update project dependencies and run into a conflict between a set of dependencies. I have to deal with similar conflicts quite often at my daily job and didn't want it to be part of my hobby project. So I thought why not give Vite a try.
 
@@ -46,16 +46,16 @@ The migration process, surprisingly, was almost seamless and the result was amaz
 <!-- {{< tweet 1385326827120599041 >}} -->
 
 __Tabular data representation__. As I described above, the published series of reports taught me two things:
-- the data that Moiva has at its disposal allow exctracting much more valuable information than is currently shown.
+- the data that Moiva has at its disposal allow extracting much more valuable information than is currently shown.
 - tabular data representation can be a great complement to graphs.
 
-I liked a lot the table view I used in the reports and I implemented a similar one in Moiva.io and got rid of the old list view.
+I liked a lot the table view I used in the reports, so I implemented a similar view in Moiva.io and it replaced the old list view.
 
-{{< figure src="/blog/images/2021-05-update/list-view.png" alt="a screenshot of Moiva.io's libraries list - Webpack, Vite and Snowpack." caption="The old list view" >}}
+{{< figure src="/blog/images/2021-05-update/list-view.png" alt="a screenshot of Moiva.io's old list view with data for Webpack, Vite and Snowpack." caption="The old list view" >}}
 
-{{< figure src="/blog/images/2021-05-update/tabular-view.png" alt="a screenshot of Moiva.io's table with data for Webpack, Vite and Snowpack" caption="The new table view" >}}
+{{< figure src="/blog/images/2021-05-update/tabular-view.png" alt="a screenshot of Moiva.io's new table view with data for Webpack, Vite and Snowpack" caption="The new table view" >}}
 
-Tha table view is much more in line with the goal of the project - make it easier to compare software.
+The table view is much more in line with the goal of the project - make it easier to compare software.
 
 ## SEO
 It was a disastrous month for Moiva in terms of Google Search performance. The coverage dropped from 1.5K to 50 pages. 
