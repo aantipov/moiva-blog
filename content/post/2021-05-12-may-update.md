@@ -5,29 +5,28 @@
     "summary": "In the previous month I implemented my idea of finding out what kind of information one can get out of Moiva and what kind of reports one can prepare."
 }
 
-This is a monthly update on Moiva.io development progress and other things I've been busy with.
+This is a monthly update on Moiva.io's development progress and other things I've been busy with.
 
-## Several reports were published in the blog
-<!-- Moiva provides a lot of historical data for different metrics. -->
-<!-- As March was coming to its end, I came up with an idea - why not to use such data and prepare a report covering first quarter of 2021. -->
-<!--  -->
-<!-- I wanted to take a snapshot of the Q1 2021 and provide information how different project performed in that period. -->
-<!-- It was also interesting to me for another reason - I considered it as a test drive of Moiva, I wanted to see what kind of valuable information I can extract and what kind of reports I can prepare. -->
-<!--  -->
-<!-- As a result, I published 6 reports for different categories of JavaScript libraries: -->
-<!-- - [Q1 2021 State of JS Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks/) -->
-<!-- - [Q1 2021 JavaScript State Management Libraries report](https://moiva.io/blog/2021-q1-report-state-management/) -->
-<!-- - [Q1 2021 JavaScript Testing Libraries and Frameworks Report](https://moiva.io/blog/2021-q1-report-js-testing-libraries/) -->
-<!-- - [Q1 2021 JavaScript Build Tools and Module Bundlers report](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers/) -->
-<!-- - [Q1 2021 Static Site Generators (JAMStack) report](https://moiva.io/blog/2021-q1-report-js-jamstack/) -->
-<!-- - [Q1 2021 JavaScript End-to-end Testing frameworks report](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks/) -->
+## Q1 2021 reports were published
+Moiva provides a lot of historical data for different metrics.
+While April was nearing, I came up with an idea - why not aggregate such data and prepare a report revealing the performance of different libraries and frameworks in Q1 2021.
 
-<!-- {{< tweet 1381917386312462339 >}} -->
+The idea was interesting to me also for another reason - I considered it as a test drive for Moiva, I wanted to see what kind of valuable information can be extracted from Moiva.io and what kind of reports one can prepare.
 
-<!-- The result was a surpise to me. I realized how much information was hidden from the Moiva users and how much of data can be extracted and nicely presented. -->
-<!-- It also taught me that being able to see graphs with historical data is nice but sometimes might not be enough. Sometimes it can be more suiteable to see raw figures reflecting the current state and compare such figures side-by-side.  -->
-<!--  -->
-<!-- I realized that tabular data can be a valuable complement to the charts. -->
+As an outcome, I published 6 reports for different categories of JavaScript libraries:
+- [Q1 2021 State of JS Frameworks](https://moiva.io/blog/2021-q1-state-of-js-frameworks/)
+- [Q1 2021 JavaScript State Management Libraries report](https://moiva.io/blog/2021-q1-report-state-management/)
+- [Q1 2021 JavaScript Testing Libraries and Frameworks Report](https://moiva.io/blog/2021-q1-report-js-testing-libraries/)
+- [Q1 2021 JavaScript Build Tools and Module Bundlers report](https://moiva.io/blog/2021-q1-report-js-build-tools-bundlers/)
+- [Q1 2021 Static Site Generators (JAMStack) report](https://moiva.io/blog/2021-q1-report-js-jamstack/)
+- [Q1 2021 JavaScript End-to-end Testing frameworks report](https://moiva.io/blog/2021-q1-report-end-to-end-testing-frameworks/)
+
+{{< tweet 1381917386312462339 >}}
+
+The result surpised me. I realized how much information was hidden from Moiva's users and how much data can be extracted and nicely presented.
+It also taught me that being able to see graphs with historical data is nice but might not be enough. Sometimes it can be more suiteable to see raw figures reflecting the current state and compare such figures side-by-side. 
+
+I realized that tabular data can be a valuable complement to the charts.
 
 ## Migration from VueCLI to Vite guide
 Having migrated Moiva from VueCLI to Vite I found out there is a lack of resources describing the process.
@@ -58,9 +57,23 @@ I liked a lot the table view I used in the reports and I implemented a similar o
 
 Tha table view is much more in line with the goal of the project - make it easier to compare software.
 
-## What I've been reading and watching
+## SEO
+It was a disastrous month for Moiva in terms of Google Search performance. The coverage dropped from 1.5K to 50 pages. 
 
+{{< figure src="/blog/images/2021-05-update/google-coverage.png" alt="A screenshot from Google Search Console showing the drop of Moiva.io's page coverage from 1.5k to 50 pages" caption="A screenshot from Google Search Console" >}}
+As a result, Google doesn't suggest Moiva.io in search results when people look for a software comparison.
 
+Google seems introduced some changes in their engine and started to treat most of Moiva's pages as duplicates. I think the reason for that is that up until now Moiva's focus was on graphical representation of data, not textual. Google apparently is not good at parsing the graphical data, even though all the charts are accompanied with the accessibility information. As a result, all the pages seem the same to Google.
+
+I hope that introduction of the table view will help here.
+
+Another thing that could potentially contribute to the problem is that in the beginning of the year I changed the structure of the urls: `compare` parameter was replaced by a combination of `npm` and `github` parameters. In order for Google to not treat new and old urls as duplicates, I could do 2 things:
+- implement 301 redirect
+- provide [`rel="canonical" link tag`](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls#rel-canonical-link-method) for the pages with old urls
+
+The first option was not practically possible because Vercel doesn't provide an option to use url's query parameters in their [redirect logic](https://vercel.com/docs/configuration#project/redirects). So I went for the second option - during the page load Moiva calculates the canonical url and adds the required link tag. But Google seems is not good yet at parsing that canonical link tag if it is added by javascript.
+
+I have an idea of migrating from [Vercel](http://vercel.com/) to [Netlify](https://www.netlify.com/) to overcome that problem using 301 redirects and solve some other limitations of Vercel. It seems to me that Netlify is a more mature solution in many aspects.
 
 ---
 
