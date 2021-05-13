@@ -61,22 +61,22 @@ The table view is much more in line with the goal of the project - make it easie
 It was a disastrous month for Moiva in terms of Google Search performance. The coverage dropped from 1.5K to 50 pages. 
 
 {{< figure src="/blog/images/2021-05-update/google-coverage.png" alt="A screenshot from Google Search Console showing the drop of Moiva.io's page coverage from 1.5k to 50 pages" caption="A screenshot from Google Search Console" >}}
-As a result, Google doesn't suggest Moiva.io in search results when people look for a software comparison.
+As a result, Google doesn't suggest Moiva.io in search results when people look for software comparison.
 
-Google seems introduced some changes in their engine and started to treat most of Moiva's pages as duplicates. I think the reason for that is that up until now Moiva's focus was on graphical representation of data, not textual. Google apparently is not good at parsing the graphical data, even though all the charts are accompanied with the accessibility information. As a result, all the pages seem the same to Google.
+Google seems introduced some changes in their engine and started to treat most of Moiva's pages as duplicates. I think Moiva's focus on graphical data representation (versus textual) was the reason for it. Google apparently is not good at parsing graphical data, even though all the Moiva's charts are accompanied by accessibility information. As a consequence, all the pages look the same to Google.
 
-I hope that introduction of the table view will help here.
+I hope the introduction of the table view will change the situation.
 
-Another thing that could potentially contribute to the problem is that in the beginning of the year I changed the structure of the urls: `compare` parameter was replaced by a combination of `npm` and `github` parameters. In order for Google to not treat new and old urls as duplicates, I could do 2 things:
+Another thing that could potentially contribute to the problem is the change of the structure of Moiva's URLs which I made at the beginning of the year: `compare` parameter was replaced by a combination of `npm` and `github` parameters. In order for Google to not treat the new and old URLs as duplicates, I could do 2 things:
 - implement 301 redirect
-- provide [`rel="canonical" link tag`](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls#rel-canonical-link-method) for the pages with old urls
+- provide [`rel="canonical" link tag`](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls#rel-canonical-link-method) for the pages with old URLs
 
-The first option was not practically possible because Vercel doesn't provide an option to use url's query parameters in their [redirect logic](https://vercel.com/docs/configuration#project/redirects). So I went for the second option - during the page load Moiva calculates the canonical url and adds the required link tag. But Google seems is not good yet at parsing that canonical link tag if it is added by javascript.
+The first option was not practically possible because Vercel doesn't provide an option to use URL's query parameters in their [redirect logic](https://vercel.com/docs/configuration#project/redirects). So I went for the second option - during the page load Moiva calculates the canonical URL and adds the required `link` tag in the `head` section of a page. But Google seems is not good yet at parsing that canonical link tag if it is added by javascript - many pages are marked as "_Duplicate without user-selected canonical_".
 
 I have an idea of migrating from [Vercel](http://vercel.com/) to [Netlify](https://www.netlify.com/) to overcome that problem using 301 redirects and solve some other limitations of Vercel. It seems to me that Netlify is a more mature solution in many aspects.
 
 ---
 
-If you have any feedback or ideas about the project, I'm keen to know!
+Have any feedback or ideas about the project? I'm keen to know!
 
-If you find the project interesting, stay tuned and Subscribe to our monthly newsletter.
+If you find the project interesting, stay tuned and Subscribe to the Moiva's monthly newsletter.
