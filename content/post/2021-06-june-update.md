@@ -8,7 +8,7 @@
 This is a June report on the progress of [Moiva.io](http://moiva.io) and other things I’ve been working on.
 
 ## Improved table view
-About a month ago I introduced a table view for presenting data. I found out that it brings a lot of value and I gave it a central place. The Charts are mainly used to present historical data and are helpful in seeing trends. The Table is kind of snapshot of the current state that displays raw data. Hence, the Table and Charts perfectly complement each other.
+About a month ago I introduced a table view for presenting data. I found out that it brings a lot of value and I gave it a central place. The Charts are mainly used to present historical data and are helpful in seeing trends. The Table serves as a snapshot of the current situation. Hence, the Table and Charts perfectly complement each other.
 
 Moiva evaluates Npm packages and GitHub repositories using roughly 20 metrics. And the number keeps growing. To help users navigate through those metrics, I grouped them into three categories: "Popularity", "Maintenance" and "Miscellaneous". Each category got highlighted with a different background color.
 
@@ -27,9 +27,9 @@ The "Recently updated issues" chart was available on Moiva.
 
 {{< figure src="/blog/images/2021-06-update/issues-chart.png" alt="a screenshot of Moiva.io's Issues chart with data for Moment, DayJS and date-fns libraries" caption="Issues Chart" >}}
 
-My idea was to show the number of bugs reports and other types of issues being opened and closed. It should have indicated how quickly the issues are being resolved, as well as a proportion of bugs to the remainder of the issues.
+My idea was to show the number of bug reports and other types of issues being opened and closed. It should have indicated how quickly the issues are being resolved, as well as a proportion of bugs to the remainder of the issues.
 
-At the time I implemented the chart I was struggling to find proper data. I chose an API that provided a list of repository issues sorted by last update date. The combination of that data with the issues statuses and labels should have yielded a good approximation of how many issues are being opened/closed.
+At the time I implemented the chart I was struggling to find proper data. I chose an API that provided a list of repository issues sorted by the last update date. The combination of that data with the issues' statuses and labels should have yielded a good approximation of how many issues are being opened/closed.
 
 Later on, I discovered I was wrong. I examined data from a number of well-known repositories and noticed that many old closed issues were constantly being updated, primarily due to new comments. It made the issues appear in Moiva as "recently closed", undermining the chart's main purpose.
 
@@ -40,10 +40,10 @@ Moiva was migrated from Vercel to Netlify.
 
 I was hoping that migration would help me fix some of Moiva's SEO issues. I found out I was too optimistic; their redirection logic constraints don't make my situation any better.
 
-Nevertheless, I think I've discovered a solution. Netlify is implementing a new feature called [Edge Handlers](https://docs.netlify.com/routing/edge-handlers/). It will allow intercepting and modifying requests and responses on-the-fly, which should be enough for me to implement the required redirection logic and add the necessary headers to responses.
+Nevertheless, I think I've discovered a solution. Netlify is implementing a new feature called [Edge Handlers](https://docs.netlify.com/routing/edge-handlers/). It will allow intercepting and modifying requests and responses on the fly, which should be enough for me to implement the required redirection logic and add the necessary headers to responses.
 
 ## SEO fixes
-Moiva is a single-page application (SPA) without server-side rendering (SSR). Because Google has historically favoured server-rendered web pages, such architecture comes with a set of SEO issues.
+Moiva is a single-page application (SPA) without server-side rendering (SSR). Because Google has historically favored server-rendered web pages, such architecture comes with a set of SEO issues.
 
 Moreover, Moiva had content-related SEO issues: Google considered Moiva's pages to be of low value because of their emphasis on graphical representation of data. The charts use `<canvas />` elements, which Google cannot read, and I made the mistake of not giving it a textual fallback. Charts accessibility attributes like `aria-label` were apparently of no help there.
 
@@ -67,7 +67,7 @@ It is still too early to say if my tweaks helped in any way in improving the SEO
 ## "Recommended reading" section
 Moiva aims to evaluate libraries as comprehensively as possible, using different sources and types of data, as well as different data representations and perspectives (snapshots, changes over time). It should allow developers to form their own opinions regarding libraries and how they compare to one another.
 
-Having said that, there are still areas unreachable for Moiva and there is sometimes a need for expert judgement and a walk-through in-depth analysis. To address these gaps I added a new section called "Recommended reading", which will suggest links to high-quality content relevant to the selected libraries.
+Having said that, there are still areas unreachable for Moiva and there is sometimes a need for expert judgment and a walk-through in-depth analysis. To address these gaps I added a new section called "Recommended reading", which will suggest links to high-quality content relevant to the selected libraries.
 
 At the moment there is only a link to a nice article [JavaScript Frameworks, Performance Comparison 2020](https://javascript.plainenglish.io/javascript-frameworks-performance-comparison-2020-cd881ac21fce) by [@RyanCarniato](https://twitter.com/RyanCarniato). More links will be added in the future. Any suggestions here are very welcome.
 
@@ -84,15 +84,15 @@ The user experience suffers, and SEO might also be affected.
 Therefore it is important to maintain the names of repositories in the Catalog up-to-date.
 
 ## Utility scripts in Deno
-I normally write NodeJS scripts for things like updating repositories names. One of my pain points was the lack of TypeScript support. I realized that I became a TypeScript addict and desperately need it everywhere. 
+I normally write NodeJS scripts for things like updating repositories' names. One of my pain points was the lack of TypeScript support. I realized that I became a TypeScript addict and desperately need it everywhere. 
 
-I decided to give [Deno](https://deno.land/) a try, and it did not dissapoint. TypeScript support out of the box and built-in `fetch` change the game.
+I decided to give [Deno](https://deno.land/) a try, and it did not disappoint. TypeScript support out of the box and built-in `fetch` change the game.
 
 ## Kudos
 Moiva is young and has little exposure; its current audience is small. Every user and supporter is extremely important. I'm grateful to everyone who helps spread the word and makes Moiva better by providing valuable feedback and pointing out issues. 
 
 I'd like to highlight the following wonderful people:
-- [@magnemg](https://twitter.com/magnemg) and [@dcorbacho](https://twitter.com/dcorbacho) for the continous help with spreading the word about Moiva.
+- [@magnemg](https://twitter.com/magnemg) and [@dcorbacho](https://twitter.com/dcorbacho) for the continuous help with spreading the word about Moiva.
 - [@muratsutunc](https://twitter.com/muratsutunc) for the feedback and pointing out the problem with legacy libraries.
 - [@devtheory_](https://twitter.com/devtheory_) for publishing a youtube video with Moiva (starts at 8:35)
 {{< youtube id="4AxQ8Ft7VzU?start=517s" >}}
