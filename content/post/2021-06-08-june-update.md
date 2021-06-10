@@ -72,23 +72,23 @@ This is a June report on the progress of [Moiva.io](http://moiva.io) and other t
 <!-- At the moment there is only a link to a nice article [JavaScript Frameworks, Performance Comparison 2020](https://javascript.plainenglish.io/javascript-frameworks-performance-comparison-2020-cd881ac21fce) by [@RyanCarniato](https://twitter.com/RyanCarniato). More links will be added in the future. Any suggestions here are very welcome. -->
 <!--  -->
 
-## Updated repositories names
-Names of repositories are often modified. The most frequent changes:
-- moving a repository under a different organization account
-- changing letters case
-
-For Moiva, such changes are an issue. 
-Moiva uses its [Catalog](https://moiva.io/catalog/) to categorize popular libraries, provide suggestions to users, and establish connection between repositories and npm packages.
-Whenever a repository from the Catalog is renamed, Moiva is unable to locate it there and, as a result, cannot provide suggestions and load npm package data.
-The user experience suffers, and SEO might also be affected.
-
-Therefore it is important to maintain the names of repositories in the Catalog up-to-date.
+<!-- ## Updated repositories names -->
+<!-- Names of repositories are often modified. The most frequent changes: -->
+<!-- - moving a repository under a different organization account -->
+<!-- - changing letters case -->
+<!--  -->
+<!-- For Moiva, such changes are an issue.  -->
+<!-- Moiva uses its [Catalog](https://moiva.io/catalog/) to categorize popular libraries, provide suggestions to users, and establish connection between repositories and npm packages. -->
+<!-- Whenever a repository from the Catalog is renamed, Moiva is unable to locate it there and, as a result, cannot provide suggestions and load npm package data. -->
+<!-- The user experience suffers, and SEO might also be affected. -->
+<!--  -->
+<!-- Therefore it is important to maintain the names of repositories in the Catalog up-to-date. -->
 
 
 ## Utility scripts in Deno
-To update repositories names and do some other chore stuff, I usually write NodeJS scripts. One of my pain points was the lack of TypeScript support. I realized that I became a TypeScript addict and desperately need it everywhere. 
+I normally write NodeJS scripts for things like updating repositories names. One of my pain points was the lack of TypeScript support. I realized that I became a TypeScript addict and desperately need it everywhere. 
 
-I decided to give Deno a try and it didn't dissapoint me. Out-of-the-box TypeScript support and built-in Fetch change the game.
+I decided to give [Deno](https://deno.land/) a try, and it did not dissapoint. TypeScript support out of the box and built-in `fetch` change the game.
 
 ## Kudos
 Moiva doesn't have a good exposure yet, its audience is quite narrow at the moment. That makes every user and supporter especially valuable. I'm very gratefull to everyone who helps spread the word and provides valuable feedback. 
