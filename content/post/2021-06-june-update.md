@@ -2,7 +2,7 @@
     "title": "June 2021 update: improved Table view, SEO fixes",
     "date": "2021-06-10",
     "url": "2021-06-update-improved-table-view-seo-fixes",
-    "summary": "I continued to work on improving the Table view, which I introduced a month ago. And I was refactoring Moiva while solving SEO issues."
+    "summary": "Improved Table view, new section \"Recommended reading\", removal of Issues chart, SEO fixes, scripts in Deno, migration to Netlify."
 }
 
 This is a June report on the progress of [Moiva.io](http://moiva.io) and other things I’ve been working on.
