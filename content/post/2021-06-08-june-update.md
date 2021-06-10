@@ -42,36 +42,34 @@ This is a June report on the progress of [Moiva.io](http://moiva.io) and other t
 <!--  -->
 <!-- Nevertheless, I think I've discovered a solution. Netlify is implementing a new feature called [Edge Handlers](https://docs.netlify.com/routing/edge-handlers/). It will allow intercepting and modifying requests and responses on-the-fly, which should be enough for me to implement the required redirection logic and add the necessary headers to responses. -->
 
-## SEO fixes
-Moiva is a single-page application (SPA) without server-side rendering (SSR). Because Google has historically favoured server-rendered web pages, such architecture comes with a set of SEO issues.
-
-Moreover, Moiva had content-related SEO issues: Google considered Moiva's pages to be of low value because of their emphasis on graphical representation of data. The charts use `<canvas />` elements, which Google cannot read, and I made the mistake of not giving it a textual fallback. Charts accessibility attributes like `aria-label` were apparently of no help there.
-
-As a result, Google flagged Moiva's pages as duplicates, and they were removed from the Index.
-
-{{< figure src="/blog/images/2021-06-update/google-coverage.png" alt="A screenshot from Google Search Console showing the drop of Moiva.io's page coverage from 1.5k to 23 pages" caption="A screenshot from Google Search Console" >}}
-
-I took a number of steps to resolve the problem.
-
-- dived into SEO topic to figure out what and how I can improve.
-- made sure Google understands the Table view by properly labeling the headers and providing the [`scope`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#the_scope_attribute) attribute.
-- all charts received fallback textual information.
-- improved the page's internal structure by careful use of headers and sections.
-
-{{% msg %}}
-Along the way, I refactored the code and extended the usage of [Vue's Reactivity APIs](https://v3.vuejs.org/api/basic-reactivity.html). I love it! It greatly simplified the logic, eliminated a number of pain points, and made it possible to build more advanced functionality in the future.
-{{% /msg %}}
-
-It is still too early to say if my tweaks helped in any way in improving the SEO. Keeping my fingers crossed 🤞
+<!-- ## SEO fixes -->
+<!-- Moiva is a single-page application (SPA) without server-side rendering (SSR). Because Google has historically favoured server-rendered web pages, such architecture comes with a set of SEO issues. -->
+<!--  -->
+<!-- Moreover, Moiva had content-related SEO issues: Google considered Moiva's pages to be of low value because of their emphasis on graphical representation of data. The charts use `<canvas />` elements, which Google cannot read, and I made the mistake of not giving it a textual fallback. Charts accessibility attributes like `aria-label` were apparently of no help there. -->
+<!--  -->
+<!-- As a result, Google flagged Moiva's pages as duplicates, and they were removed from the Index. -->
+<!--  -->
+<!-- {{< figure src="/blog/images/2021-06-update/google-coverage.png" alt="A screenshot from Google Search Console showing the drop of Moiva.io's page coverage from 1.5k to 23 pages" caption="A screenshot from Google Search Console" >}} -->
+<!--  -->
+<!-- I took a number of steps to resolve the problem. -->
+<!--  -->
+<!-- - dived into SEO topic to figure out what and how I can improve. -->
+<!-- - made sure Google understands the Table view by properly labeling the headers and providing the [`scope`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#the_scope_attribute) attribute. -->
+<!-- - all charts received fallback textual information. -->
+<!-- - improved the page's internal structure by careful use of headers and sections. -->
+<!--  -->
+<!-- {{% msg %}} -->
+<!-- Along the way, I refactored the code and extended the usage of [Vue's Reactivity APIs](https://v3.vuejs.org/api/basic-reactivity.html). I love it! It greatly simplified the logic, eliminated a number of pain points, and made it possible to build more advanced functionality in the future. -->
+<!-- {{% /msg %}} -->
+<!--  -->
+<!-- It is still too early to say if my tweaks helped in any way in improving the SEO. Keeping my fingers crossed 🤞 -->
 
 ## "Recommended reading" section
-Moiva does its best to evaluate libraries as comprehensively as possible using many kinds of data and presenting them in charts and table. Moiva does its best to help developers make their own judgement about libraries and how they compare to each other.
+Moiva aims to evaluate libraries as comprehensively as possible, using different sources and types of data, as well as different data representations and perspectives (snapshots, changes over time). It should allow developers to form their own opinions regarding libraries and how they compare to one another.
 
-That said, I see there is sometimes a need in experts' judgement or being aware about important updates regarding the status of a library. For example, when a user compares Date utility libraries would be nice to let a user know that authors of Moment.js recommend replace it with other libraries (thanks to [@muratsutunc](https://twitter.com/muratsutunc) for pointing out the problem). Another example, when a user compares UI Frameworks would be nice to provide a link to an in-depth performance comparison.
+Having said that, there are still areas unreachable for Moiva and there is sometimes a need for expert judgement and a walk-through in-depth analysis. To address these gaps I added a new section called "Recommended reading", which will suggest links to high-quality content relevant to the selected libraries.
 
-To cover that need I introduced a new section in Moiva "Recommended reading" which would suggest links to high quality blog posts and important libraries updates relevant to the currently selected libraries.
-
-At the moment there is one link only - [JavaScript Frameworks, Performance Comparison 2020](https://javascript.plainenglish.io/javascript-frameworks-performance-comparison-2020-cd881ac21fce) by [@RyanCarniato](https://twitter.com/RyanCarniato). I will be adding more good links soon. If you have good articles in mind, let me know.
+At the moment there is only a link to a nice article [JavaScript Frameworks, Performance Comparison 2020](https://javascript.plainenglish.io/javascript-frameworks-performance-comparison-2020-cd881ac21fce) by [@RyanCarniato](https://twitter.com/RyanCarniato). More links will be added in the future. Any suggestions here are very welcome.
 
 
 ## Updated repos names
@@ -96,6 +94,11 @@ I decided to give Deno a try and it didn't dissapoint me. Out-of-the-box TypeScr
 Moiva doesn't have a good exposure yet, its audience is quite narrow at the moment. That makes every user and supporter especially valuable. I'm very gratefull to everyone who helps spread the word and provides valuable feedback. 
 
 It's very important to me to know that I build something valuable.
+
+
+For example, when a user compares Date utility libraries would be nice to let a user know that authors of Moment.js recommend replace it with other libraries (thanks to [@muratsutunc](https://twitter.com/muratsutunc) for pointing out the problem). 
+
+
 
 I'd like to highlight the following nice people:
 - [@magnemg](https://twitter.com/magnemg) and [@dcorbacho](https://twitter.com/dcorbacho) for the continous help with spreading the word about Moiva.
