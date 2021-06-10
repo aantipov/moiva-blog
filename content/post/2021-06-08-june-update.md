@@ -64,25 +64,25 @@ This is a June report on the progress of [Moiva.io](http://moiva.io) and other t
 <!--  -->
 <!-- It is still too early to say if my tweaks helped in any way in improving the SEO. Keeping my fingers crossed 🤞 -->
 
-## "Recommended reading" section
-Moiva aims to evaluate libraries as comprehensively as possible, using different sources and types of data, as well as different data representations and perspectives (snapshots, changes over time). It should allow developers to form their own opinions regarding libraries and how they compare to one another.
+<!-- ## "Recommended reading" section -->
+<!-- Moiva aims to evaluate libraries as comprehensively as possible, using different sources and types of data, as well as different data representations and perspectives (snapshots, changes over time). It should allow developers to form their own opinions regarding libraries and how they compare to one another. -->
+<!--  -->
+<!-- Having said that, there are still areas unreachable for Moiva and there is sometimes a need for expert judgement and a walk-through in-depth analysis. To address these gaps I added a new section called "Recommended reading", which will suggest links to high-quality content relevant to the selected libraries. -->
+<!--  -->
+<!-- At the moment there is only a link to a nice article [JavaScript Frameworks, Performance Comparison 2020](https://javascript.plainenglish.io/javascript-frameworks-performance-comparison-2020-cd881ac21fce) by [@RyanCarniato](https://twitter.com/RyanCarniato). More links will be added in the future. Any suggestions here are very welcome. -->
+<!--  -->
 
-Having said that, there are still areas unreachable for Moiva and there is sometimes a need for expert judgement and a walk-through in-depth analysis. To address these gaps I added a new section called "Recommended reading", which will suggest links to high-quality content relevant to the selected libraries.
-
-At the moment there is only a link to a nice article [JavaScript Frameworks, Performance Comparison 2020](https://javascript.plainenglish.io/javascript-frameworks-performance-comparison-2020-cd881ac21fce) by [@RyanCarniato](https://twitter.com/RyanCarniato). More links will be added in the future. Any suggestions here are very welcome.
-
-
-## Updated repos names
-Repositories names are being changed quite often. The most frequent changes:
+## Updated repositories names
+Names of repositories are often modified. The most frequent changes:
 - moving a repository under a different organization account
 - changing letters case
 
-It causes a problem. 
-Moiva uses its Catalog to categorise popular libraries, provide suggestions to users and to establish connection between repositories and npm packages.
-Whenever a repository from the Catalog changes its name, Moiva becomes unable to locate it there and, as a result, can't provide suggestions and load Npm package data.
-The user experience degrades. And it also might affect SEO.
+For Moiva, such changes are an issue. 
+Moiva uses its [Catalog](https://moiva.io/catalog/) to categorize popular libraries, provide suggestions to users, and establish connection between repositories and npm packages.
+Whenever a repository from the Catalog is renamed, Moiva is unable to locate it there and, as a result, cannot provide suggestions and load npm package data.
+The user experience suffers, and SEO might also be affected.
 
-Therefore it is important to maintain Catalog's repositories names up-to-date.
+Therefore it is important to maintain the names of repositories in the Catalog up-to-date.
 
 
 ## Utility scripts in Deno
