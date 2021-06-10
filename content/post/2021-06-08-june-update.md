@@ -85,22 +85,15 @@ This is a June report on the progress of [Moiva.io](http://moiva.io) and other t
 <!-- Therefore it is important to maintain the names of repositories in the Catalog up-to-date. -->
 
 
-## Utility scripts in Deno
-I normally write NodeJS scripts for things like updating repositories names. One of my pain points was the lack of TypeScript support. I realized that I became a TypeScript addict and desperately need it everywhere. 
-
-I decided to give [Deno](https://deno.land/) a try, and it did not dissapoint. TypeScript support out of the box and built-in `fetch` change the game.
+<!-- ## Utility scripts in Deno -->
+<!-- I normally write NodeJS scripts for things like updating repositories names. One of my pain points was the lack of TypeScript support. I realized that I became a TypeScript addict and desperately need it everywhere.  -->
+<!--  -->
+<!-- I decided to give [Deno](https://deno.land/) a try, and it did not dissapoint. TypeScript support out of the box and built-in `fetch` change the game. -->
 
 ## Kudos
-Moiva doesn't have a good exposure yet, its audience is quite narrow at the moment. That makes every user and supporter especially valuable. I'm very gratefull to everyone who helps spread the word and provides valuable feedback. 
+Moiva is young and has little exposure; its current audience is small. Every user and supporter is extremely important. I'm grateful to everyone who helps spread the word and makes Moiva better by providing valuable feedback and pointing out issues. 
 
-It's very important to me to know that I build something valuable.
-
-
-For example, when a user compares Date utility libraries would be nice to let a user know that authors of Moment.js recommend replace it with other libraries (thanks to [@muratsutunc](https://twitter.com/muratsutunc) for pointing out the problem). 
-
-
-
-I'd like to highlight the following nice people:
+I'd like to highlight the following wonderful people:
 - [@magnemg](https://twitter.com/magnemg) and [@dcorbacho](https://twitter.com/dcorbacho) for the continous help with spreading the word about Moiva.
 - [@muratsutunc](https://twitter.com/muratsutunc) for the feedback and pointing out the problem with legacy libraries.
 - [@devtheory_](https://twitter.com/devtheory_) for publishing a youtube video with Moiva (starts at 8:35)
