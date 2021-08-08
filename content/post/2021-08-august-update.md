@@ -1,6 +1,6 @@
 {
 "title": "August 2021 update: shareable and downloadable charts, new charts for metrics in the Table",
-"date": "2021-08-05",
+"date": "2021-08-08",
 "url": "2021-08-update-share-charts-new-suggestions",
 "summary": "Thanks to my vacation in July, Moiva got multiple nice features and improvements: ability to copy/share/download charts, rewritten suggestions mechanism, and many new charts."
 }
