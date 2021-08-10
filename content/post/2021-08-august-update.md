@@ -41,7 +41,7 @@ To facilitate adding new libraries, I refactored the Catalog:
 - use tags of selected libraries to suggest alternatives
 - sort suggestions based on “similarity” to the selected ones. The more tags a library has in common with the tags of selected libraries, the more “similar” it is.
 
-I the future, I plan to include GitHub Stars and Npm Downloads numbers, and libraries statuses to improve the sorting algorithm.
+In the future, I plan to include GitHub Stars and Npm Downloads numbers, and libraries statuses to improve the sorting algorithm.
 
 ## Tooltips in Suggestions
 
